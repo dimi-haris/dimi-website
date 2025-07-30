@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
-import Header from "@/components/header/Header"
-import Footer from "@/components/footer/Footer"
+import AppLayout from "@/components/app-layout/AppLayout"
 import "./globals.css"
 
 // Define Montserrat font with variable
@@ -27,12 +26,11 @@ export default function RootLayout({
 			<body
 				className={`${montserrat.variable} antialiased h-fit w-screen`}
 			>
-				{/* Header */}
-				<Header />
-				{/* Main content */}
-				<main>{children}</main>
-				{/* Footer */}
-				<Footer />
+				{/* App layout */}
+				<AppLayout>
+					{/* Main content */}
+					<main>{children}</main>
+				</AppLayout>
 			</body>
 		</html>
 	)

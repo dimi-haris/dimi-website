@@ -1,7 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Header(): React.ReactElement | null {
+	// Get the current pathname
+	const pathname = usePathname()
+
 	return (
 		// Header container
 		<div className="h-16 w-[72.5%] rounded-full bg-[#1C1C1C08] backdrop-blur-sm border border-[#E0E0E033] absolute top-10 left-[13.75%] z-50 flex flex-row items-center justify-between px-7">
@@ -22,7 +28,11 @@ export default function Header(): React.ReactElement | null {
 				height={50}
 			/>
 			{/* Navigation links */}
-			<div className="flex flex-row items-center justify-center gap-5 text-nav-link text-white font-semibold">
+			<div
+				className={`flex flex-row items-center justify-center gap-5 text-nav-link ${
+					pathname === "/" ? "text-white" : "text-heading"
+				} font-semibold`}
+			>
 				<Link href={"/"}>Home</Link>
 				<Link href={"/about"}>About</Link>
 				<Link href={"/blogs"}>Blogs</Link>
