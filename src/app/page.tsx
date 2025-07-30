@@ -1,103 +1,204 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import { useState, useCallback } from "react"
+import Image from "next/image"
+import HeroSection from "@/components/hero-section/HeroSection"
+import Button from "@/components/button/Button"
+import EmpoweringArtistsSection from "@/components/empowering-artists-section/EmpoweringArtistsSection"
+import BlogCard from "@/components/blog-card/BlogCard"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+export default function Home(): React.ReactElement | null {
+	// State for the email input
+	const [email, setEmail] = useState<string>("")
+
+	// Memoized callback for handling the Learn More button click
+	const handleLearnMore = useCallback((): void => {
+		console.log("Learn More button clicked")
+	}, [])
+
+	// Memoized callback for handling the Learn More button click
+	const handleExploreMore = useCallback((): void => {
+		console.log("Learn More button clicked")
+	}, [])
+
+	// Memoized callback for handling the Subscribe button click
+	const handleSubscribe = useCallback((): void => {
+		console.log("Subscribe button clicked")
+	}, [])
+
+	return (
+		// Main container
+		<div className="w-screen flex flex-col">
+			{/* Hero section */}
+			<HeroSection />
+			{/* Bringing Ideas section */}
+			<div className="w-full flex flex-row items-center gap-24 p-24">
+				{/* Ideas image group */}
+				<Image
+					src={"/images/ideas-image-group.png"}
+					alt="ideas"
+					className="object-contain"
+					height={500}
+					width={500}
+				/>
+				{/* Text container */}
+				<div className="flex-1 flex flex-col justify-center gap-5">
+					{/* Title wrapper */}
+					<div className="relative w-fit">
+						{/* Title */}
+						<p className="text-[40px] font-semibold text-heading tracking-wide">
+							Bringing Ideas to Light
+						</p>
+						{/* Brush stroke */}
+						<Image
+							src={"/images/brush-stroke.png"}
+							alt="brush-stroke"
+							className="absolute -bottom-3 right-0 object-contain"
+							height={5}
+							width={250}
+						/>
+					</div>
+					{/* Description */}
+					<p className="text-[20px]/8 text-description">
+						DiMi is a digital space where artists, creatives, and
+						industry professionals come together to connect,
+						collaborate, and thrive. DiMi supports your artistic
+						journey from inspiration to community building to
+						managing your artistic career.
+					</p>
+					{/* Learn more button */}
+					<Button
+						title={"Learn More"}
+						color={"secondary"}
+						onClick={handleLearnMore}
+					/>
+				</div>
+			</div>
+			<EmpoweringArtistsSection />
+			{/* Featured blogs section */}
+			<div className="flex flex-col items-center py-24 gap-10">
+				{/* Title wrapper */}
+				<div className="flex flex-col items-center">
+					<div className="relative w-fit">
+						{/* Title */}
+						<p className="text-[40px] font-semibold text-heading tracking-wide">
+							Featured Blogs
+						</p>
+						{/* Brush stroke */}
+						<Image
+							src={"/images/brush-stroke.png"}
+							alt="brush-stroke"
+							className="absolute -bottom-3 right-0 object-contain"
+							height={5}
+							width={250}
+						/>
+					</div>
+					{/* Sub title */}
+					<p className="text-description">
+						Browse featured artists, ongoing projects, and success
+						stories.
+					</p>
+				</div>
+				{/* Blog cards */}
+				<div className="flex flex-row items-start justify-center gap-5">
+					<BlogCard
+						title="New Art Galleries"
+						image="/images/blog-image-1.png"
+					/>
+					<BlogCard
+						title="New Art Galleries"
+						image="/images/blog-image-2.png"
+					/>
+					<BlogCard
+						title="New Art Galleries"
+						image="/images/blog-image-3.png"
+					/>
+				</div>
+				{/* Explore more button */}
+				<Button
+					title={"Explore More"}
+					color={"primary"}
+					onClick={handleExploreMore}
+				/>
+			</div>
+			{/* Subscribe section */}
+			<div className="flex flex-col items-center py-10 gap-10">
+				{/* Title wrapper */}
+				<div className="flex flex-col items-center gap-2">
+					{/* Title */}
+					<p className="text-primary text-xl uppercase font-medium">
+						become a part of our community
+					</p>
+					{/* Sub title */}
+					<p className="text-[#262626] text-[40px] font-semibold max-w-[750px] text-center">
+						Don’t miss a beat—subscribe for updates from the
+						creative front lines.
+					</p>
+					{/* Sub title */}
+					<p className="text-xl text-description">
+						A passionate team empowering artists and creators
+						worldwide.
+					</p>
+				</div>
+				{/* Subscribe form */}
+				<div className="flex flex-row items-center justify-between gap-5">
+					{/* Subscribe input container */}
+					<div className="h-[60px] w-96 rounded-full border border-heading flex flex-row items-center gap-3 px-3">
+						{/* Search icon */}
+						<Image
+							src={"/icons/search.png"}
+							alt="search"
+							className="object-contain"
+							height={15}
+							width={15}
+						/>
+						{/* Email input */}
+						<input
+							type="email"
+							placeholder="Email Address"
+							className="w-full outline-0"
+							value={email}
+							onChange={(e) => {
+								setEmail(e.target.value)
+							}}
+						/>
+					</div>
+					{/* Subscribe button */}
+					<Button
+						title={"Subscribe"}
+						color={"primary"}
+						height="60px"
+						onClick={handleSubscribe}
+					/>
+				</div>
+			</div>
+			{/* Marquee wrapper */}
+			<div className="bg-[#2b313c] py-[14px] overflow-hidden w-full my-10">
+				{/* Marquee text */}
+				<div className="flex gap-5 animate-marquee">
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						DiMi Website remastered
+					</p>
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						/
+					</p>
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						DiMi Blog launched
+					</p>
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						/
+					</p>
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						Artists Unveiled Podcast Recording in Progress
+					</p>
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						/
+					</p>
+					<p className="text-[#bdbdbd] text-base font-semibold uppercase">
+						Achieved 70% AI generated code
+					</p>
+				</div>
+			</div>
+		</div>
+	)
 }
