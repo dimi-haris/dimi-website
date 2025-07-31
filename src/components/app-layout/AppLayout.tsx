@@ -42,13 +42,13 @@ export default function AppLayout({
 				<Image
 					src={"/images/music-2.png"}
 					alt="music"
-					className="absolute top-[550px] left-[25%] object-contain z-0"
+					className="absolute top-[500px] left-[22.5%] object-contain z-0"
 					height={200}
 					width={200}
 				/>
 			)}
 			{/* Layout container */}
-			<div className="absolute top-0 left-0 w-full z-10">
+			<div className="w-full flex flex-col">
 				{/* Header */}
 				<Header />
 				{/* Children */}
