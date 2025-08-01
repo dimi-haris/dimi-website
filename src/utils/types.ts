@@ -5,3 +5,15 @@ export type OurValue = {
 	description: string
 	icon: string
 }
+
+export type DiMiHelp = {
+	title: string
+	description: string
+	icon: string
+}
+
+export type TeamMember = {
+	name: string
+	designation: string
+	image: string
+}

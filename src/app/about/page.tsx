@@ -1,6 +1,9 @@
 import OurVisionSection from "@/components/our-vision-section/OurVisionSection"
 import OurMissionSection from "@/components/our-mission-section/OurMissionSection"
 import OurValuesSection from "@/components/our-values-section/OurValuesSection"
+import HowDiMiCanHelpYouSection from "@/components/how-dimi-can-help-you-section/HowDiMiCanHelpYouSection"
+import DreamTeamSection from "@/components/dream-team-section/DreamTeamSection"
+import TroupeSection from "@/components/troupe-section/TroupeSection"
 
 export default function About(): React.ReactElement | null {
 	return (
@@ -49,6 +52,12 @@ export default function About(): React.ReactElement | null {
 			<OurMissionSection />
 			{/* Our Values section */}
 			<OurValuesSection />
+			{/* How DiMi Can Help You section */}
+			<HowDiMiCanHelpYouSection />
+			{/* The Dream Team section */}
+			<DreamTeamSection />
+			{/* The Troupe section */}
+			<TroupeSection />
 		</div>
 	)
 }

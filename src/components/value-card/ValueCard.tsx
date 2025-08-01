@@ -18,7 +18,7 @@ export default function ValueCard(props: OurValue): React.ReactElement | null {
 				{/* Value icon */}
 				<Image
 					src={props.icon}
-					alt="dream"
+					alt={props.title}
 					className="object-contain"
 					width={25}
 					height={25}

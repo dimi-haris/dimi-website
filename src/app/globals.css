@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import "tailwindcss";
 
 @theme inline {
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
+	--font-kaushan: "Kaushan Script", cursive;
 
 	--color-primary: #e5ab4e;
 	--color-secondary: #5896bc;
@@ -56,6 +58,9 @@
 				rgba(88, 150, 188, 0) -7%
 			);
 		background-color: #ffffff;
+	}
+	.font-kaushan {
+		font-family: var(--font-kaushan);
 	}
 }
 
