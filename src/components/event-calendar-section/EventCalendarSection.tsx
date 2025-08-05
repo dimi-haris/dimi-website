@@ -24,9 +24,7 @@ export default function EventCalendarSection(): React.ReactElement | null {
 	}, []) // Empty dependency array since this calculation only depends on the current year and month
 
 	// State for the selected month initially set to the current month
-	const [selectedMonth, setSelectedMonth] = useState<string>(
-		months[new Date().getMonth()]
-	)
+	const [selectedMonth, setSelectedMonth] = useState<string>(months[0])
 
 	// Get number of days in selected month
 	const daysInMonth = useMemo(() => {
