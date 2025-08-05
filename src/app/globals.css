@@ -46,7 +46,7 @@
 }
 
 @layer utilities {
-	.bg-about-radial {
+	.bg-screen-radial {
 		background-image: radial-gradient(
 				141.16% 172.8% at 0% 193%,
 				rgba(229, 171, 78, 0.8) -50%,
@@ -58,6 +58,24 @@
 				rgba(88, 150, 188, 0) -7%
 			);
 		background-color: #ffffff;
+	}
+	.bg-card-radial {
+		background-image: radial-gradient(
+				147.78% 58.45% at -21.84% 4.12%,
+				rgba(210, 217, 67, 0.8) 0%,
+				rgba(83, 193, 222, 0) 100%
+			),
+			radial-gradient(
+				88.08% 79.57% at 98.38% 100%,
+				rgba(255, 158, 49, 0.8) 0%,
+				rgba(210, 217, 67, 0) 100%
+			),
+			linear-gradient(
+				251deg,
+				rgba(64, 186, 255, 0.8) 1.06%,
+				rgba(0, 0, 0, 0) 85.58%
+			);
+		background-color: #131313;
 	}
 	.font-kaushan {
 		font-family: var(--font-kaushan);

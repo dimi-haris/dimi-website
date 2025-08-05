@@ -5,7 +5,7 @@ import Image from "next/image"
 import Button from "../button/Button"
 import BlogCard from "../blog-card/BlogCard"
 
-export default function FeaturedBlogsSection(): React.ReactElement | null {
+export default function LatestNewsSection(): React.ReactElement | null {
 	// Memoized callback for handling the Explore More button click
 	const handleExploreMore = useCallback((): void => {
 		console.log("Explore More button clicked")
@@ -13,13 +13,13 @@ export default function FeaturedBlogsSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="flex flex-col items-center py-20 gap-10">
+		<div className="flex flex-col items-center pb-15 gap-10">
 			{/* Title wrapper */}
 			<div className="flex flex-col items-center">
 				<div className="relative w-fit">
 					{/* Title */}
 					<p className="text-[40px] font-semibold text-heading tracking-wide">
-						Featured Blogs
+						Latest News
 					</p>
 					{/* Brush stroke */}
 					<Image

@@ -17,7 +17,9 @@ export default function AppLayout({
 		// Layout wrapper with background
 		<div
 			className={`h-fit w-screen ${
-				pathname === "/about" ? "bg-about-radial" : "bg-white"
+				pathname === "/about" || pathname === "/blogs"
+					? "bg-screen-radial"
+					: "bg-white"
 			}`}
 		>
 			{pathname === "/about" && (

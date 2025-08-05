@@ -16,7 +16,7 @@ export default function Button(props: ButtonProps): React.ReactElement | null {
 				props.width ? `w-[${props.width}]` : "w-fit"
 			} rounded-full px-10 flex items-center justify-center ${
 				props.color === "primary" ? "bg-primary" : "bg-secondary"
-			} text-white inset-shadow-sm`}
+			} text-white inset-shadow-sm cursor-pointer`}
 			onClick={props.onClick}
 		>
 			{props.title}
