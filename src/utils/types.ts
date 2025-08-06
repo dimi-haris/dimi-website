@@ -17,3 +17,9 @@ export type TeamMember = {
 	designation: string
 	image: string
 }
+
+export type PodcastPlatform = {
+	name: string
+	image: string
+	url: string
+}
