@@ -24,36 +24,33 @@ export default function AppLayout({
 					: "bg-white"
 			}`}
 		>
-			{pathname === "/about" ||
-				(pathname === "/services" && (
-					<Image
-						src={"/images/brush-stroke-2.png"}
-						alt="brush-stroke"
-						className="absolute top-24 right-0 object-contain z-0"
-						height={535}
-						width={215}
-					/>
-				))}
-			{pathname === "/about" ||
-				(pathname === "/services" && (
-					<Image
-						src={"/images/music-1.png"}
-						alt="music"
-						className="absolute top-64 left-0 object-contain z-0"
-						height={185}
-						width={185}
-					/>
-				))}
-			{pathname === "/about" ||
-				(pathname === "/services" && (
-					<Image
-						src={"/images/music-2.png"}
-						alt="music"
-						className="absolute top-[500px] left-[22.5%] object-contain z-0"
-						height={200}
-						width={200}
-					/>
-				))}
+			{(pathname === "/about" || pathname === "/services") && (
+				<Image
+					src={"/images/brush-stroke-2.png"}
+					alt="brush-stroke"
+					className="absolute top-24 right-0 object-contain z-0"
+					height={535}
+					width={215}
+				/>
+			)}
+			{(pathname === "/about" || pathname === "/services") && (
+				<Image
+					src={"/images/music-1.png"}
+					alt="music"
+					className="absolute top-64 left-0 object-contain z-0"
+					height={185}
+					width={185}
+				/>
+			)}
+			{(pathname === "/about" || pathname === "/services") && (
+				<Image
+					src={"/images/music-2.png"}
+					alt="music"
+					className="absolute top-[500px] left-[22.5%] object-contain z-0"
+					height={200}
+					width={200}
+				/>
+			)}
 			{/* Layout container */}
 			<div className="w-full flex flex-col">
 				{/* Header */}
