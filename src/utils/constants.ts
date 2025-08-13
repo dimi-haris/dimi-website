@@ -1,4 +1,4 @@
-import { OurValue, DiMiHelp, TeamMember } from "./types"
+import { OurValue, DiMiHelp, TeamMember, Feature } from "./types"
 
 export const artists: string[] = [
 	"Musicians",
@@ -136,5 +136,26 @@ export const troupe: TeamMember[] = [
 		name: "Shazia Yaqub",
 		designation: "Brand & Content Strategist",
 		image: "/images/shazia-yaqub.jpg"
+	}
+]
+
+export const features: Feature[] = [
+	{
+		title: "Onsite Chatbot Virtual Assistance",
+		description:
+			"Your creative sidekick—ready 24/7 to guide you through DiMi, so you never miss a beat.",
+		image: "/images/chatbot.png"
+	},
+	{
+		title: "In app one to one and group chats",
+		description:
+			"Collaborate in real-time with fellow NYC creatives—whether it’s one-on-one or your whole project crew.",
+		image: "/images/group-chat.png"
+	},
+	{
+		title: "In app notifications",
+		description:
+			"Stay in the loop with instant updates on your collabs, deadlines, and spotlight moments",
+		image: "/images/notifications.png"
 	}
 ]

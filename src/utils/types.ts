@@ -23,3 +23,9 @@ export type PodcastPlatform = {
 	image: string
 	url: string
 }
+
+export type Feature = {
+	title: string
+	description: string
+	image: string
+}
