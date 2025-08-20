@@ -23,7 +23,7 @@ export default function Footer(): React.ReactElement | null {
 							Team
 						</Link>
 						<Link
-							href={"#"}
+							href={"/faqs"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							FAQs
