@@ -4,8 +4,8 @@ import Link from "next/link"
 export default function Footer(): React.ReactElement | null {
 	return (
 		// Footer container
-		<div className="w-full bg-[#040607] px-[120px] py-[80px] rounded-t-[80px] flex flex-col gap-5">
-			<div className="w-full flex flex-row items-start justify-between">
+		<div className="w-full bg-[#040607] px-5 sm:px-[120px] py-[50px] sm:py-[80px] rounded-t-[80px] flex flex-col gap-10 sm:gap-5">
+			<div className="w-full flex flex-col gap-10 sm:gap-0 sm:flex-row items-center sm:items-start sm:justify-between">
 				<Image
 					src={"/icons/logo-full.png"}
 					alt="logo"
@@ -13,9 +13,9 @@ export default function Footer(): React.ReactElement | null {
 					width={200}
 					height={80}
 				/>
-				<div className="flex flex-col gap-3">
+				<div className="flex flex-col gap-3 items-center sm:items-start">
 					<p className="text-primary text-base font-medium">About</p>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
@@ -30,11 +30,11 @@ export default function Footer(): React.ReactElement | null {
 						</Link>
 					</div>
 				</div>
-				<div className="flex flex-col gap-3">
+				<div className="flex flex-col gap-3 items-center sm:items-start">
 					<p className="text-primary text-base font-medium">
 						Community
 					</p>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
@@ -61,9 +61,9 @@ export default function Footer(): React.ReactElement | null {
 						</Link>
 					</div>
 				</div>
-				<div className="flex flex-col gap-3">
+				<div className="flex flex-col gap-3 items-center sm:items-start">
 					<p className="text-primary text-base font-medium">Legal</p>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
@@ -90,11 +90,11 @@ export default function Footer(): React.ReactElement | null {
 						</Link>
 					</div>
 				</div>
-				<div className="flex flex-col gap-3">
+				<div className="flex flex-col gap-3 items-center sm:items-start">
 					<p className="text-primary text-base font-medium">
 						Contact Us
 					</p>
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
@@ -110,7 +110,7 @@ export default function Footer(): React.ReactElement | null {
 					</div>
 				</div>
 			</div>
-			<div className="w-full flex flex-row items-center justify-between">
+			<div className="w-full flex flex-col gap-5 sm:gap-0 sm:flex-row items-center sm:justify-between">
 				<Image
 					src={"/images/sectigo-seal.png"}
 					alt="sectigo-seal"
@@ -157,7 +157,7 @@ export default function Footer(): React.ReactElement | null {
 					</Link>
 				</div>
 			</div>
-			<p className="text-sm text-[#bdbdbd]">
+			<p className="text-sm text-[#bdbdbd] self-center sm:self-start">
 				© DiMi Inc. All rights reserved
 			</p>
 		</div>
