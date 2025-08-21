@@ -6,6 +6,7 @@ export default function Footer(): React.ReactElement | null {
 		// Footer container
 		<div className="w-full bg-[#040607] px-5 sm:px-[120px] py-[50px] sm:py-[80px] rounded-t-[80px] flex flex-col gap-10 sm:gap-5">
 			<div className="w-full flex flex-col gap-10 sm:gap-0 sm:flex-row items-center sm:items-start sm:justify-between">
+				{/* Logo */}
 				<Image
 					src={"/icons/logo-full.png"}
 					alt="logo"
@@ -13,8 +14,11 @@ export default function Footer(): React.ReactElement | null {
 					width={200}
 					height={80}
 				/>
+				{/* About navigation links */}
 				<div className="flex flex-col gap-3 items-center sm:items-start">
+					{/* Title */}
 					<p className="text-primary text-base font-medium">About</p>
+					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
@@ -30,10 +34,13 @@ export default function Footer(): React.ReactElement | null {
 						</Link>
 					</div>
 				</div>
+				{/* Community navigation links */}
 				<div className="flex flex-col gap-3 items-center sm:items-start">
+					{/* Title */}
 					<p className="text-primary text-base font-medium">
 						Community
 					</p>
+					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
@@ -61,8 +68,11 @@ export default function Footer(): React.ReactElement | null {
 						</Link>
 					</div>
 				</div>
+				{/* Legal navigation links */}
 				<div className="flex flex-col gap-3 items-center sm:items-start">
+					{/* Title */}
 					<p className="text-primary text-base font-medium">Legal</p>
+					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
@@ -90,10 +100,13 @@ export default function Footer(): React.ReactElement | null {
 						</Link>
 					</div>
 				</div>
+				{/* Contact Us navigation links */}
 				<div className="flex flex-col gap-3 items-center sm:items-start">
+					{/* Title */}
 					<p className="text-primary text-base font-medium">
 						Contact Us
 					</p>
+					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
 							href={"#"}
@@ -111,6 +124,7 @@ export default function Footer(): React.ReactElement | null {
 				</div>
 			</div>
 			<div className="w-full flex flex-col gap-5 sm:gap-0 sm:flex-row items-center sm:justify-between">
+				{/* Sectigo seal */}
 				<Image
 					src={"/images/sectigo-seal.png"}
 					alt="sectigo-seal"
@@ -118,7 +132,9 @@ export default function Footer(): React.ReactElement | null {
 					width={150}
 					height={40}
 				/>
+				{/* Social media links */}
 				<div className="flex flex-row items-center gap-1">
+					{/* Youtube link */}
 					<Link href={"#"}>
 						<Image
 							src={"/icons/youtube.png"}
@@ -128,6 +144,7 @@ export default function Footer(): React.ReactElement | null {
 							height={35}
 						/>
 					</Link>
+					{/* Instagram link */}
 					<Link href={"#"}>
 						<Image
 							src={"/icons/instagram.png"}
@@ -137,6 +154,7 @@ export default function Footer(): React.ReactElement | null {
 							height={35}
 						/>
 					</Link>
+					{/* Facebook link */}
 					<Link href={"#"}>
 						<Image
 							src={"/icons/facebook.png"}
@@ -146,6 +164,7 @@ export default function Footer(): React.ReactElement | null {
 							height={35}
 						/>
 					</Link>
+					{/* Twitter link */}
 					<Link href={"#"}>
 						<Image
 							src={"/icons/twitter.png"}
@@ -157,6 +176,7 @@ export default function Footer(): React.ReactElement | null {
 					</Link>
 				</div>
 			</div>
+			{/* Copyright notice */}
 			<p className="text-sm text-[#bdbdbd] self-center sm:self-start">
 				© DiMi Inc. All rights reserved
 			</p>
