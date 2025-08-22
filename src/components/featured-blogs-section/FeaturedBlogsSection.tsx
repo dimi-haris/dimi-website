@@ -18,7 +18,7 @@ export default function FeaturedBlogsSection(): React.ReactElement | null {
 			<div className="flex flex-col items-center">
 				<div className="relative w-fit">
 					{/* Title */}
-					<p className="text-[40px] font-semibold text-heading tracking-wide">
+					<p className="text-[32px] sm:text-[40px] font-semibold text-heading tracking-wide">
 						Featured Blogs
 					</p>
 					{/* Brush stroke */}
@@ -31,13 +31,13 @@ export default function FeaturedBlogsSection(): React.ReactElement | null {
 					/>
 				</div>
 				{/* Sub title */}
-				<p className="text-description">
+				<p className="text-description text-center text-sm sm:text-base px-5 sm:px-0">
 					Browse featured artists, ongoing projects, and success
 					stories.
 				</p>
 			</div>
 			{/* Blog cards */}
-			<div className="flex flex-row items-start justify-center gap-5">
+			<div className="flex flex-col sm:flex-row items-start justify-center gap-5">
 				<BlogCard
 					title="New Art Galleries"
 					image="/images/blog-image-1.png"
