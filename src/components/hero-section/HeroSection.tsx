@@ -35,23 +35,29 @@ export default function HeroSection(): React.ReactElement | null {
 
 	return (
 		// Container with video background and text
-		<div className="h-[760px] w-full rounded-b-[50px] overflow-hidden relative">
+		<div className="h-[100vh] sm:h-[760px] w-full rounded-b-[50px] overflow-hidden relative">
 			{/* Video background */}
-			<video className="h-fit w-full" autoPlay loop muted playsInline>
+			<video
+				className="h-full sm:h-fit w-full object-cover"
+				autoPlay
+				loop
+				muted
+				playsInline
+			>
 				<source src={"/videos/background-video.mp4"} type="video/mp4" />
 			</video>
 			{/* Text container */}
 			<div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
 				{/* Main Title */}
-				<p className="uppercase text-primary text-[32px] font-semibold tracking-tight">
+				<p className="uppercase text-primary text-xl sm:text-[32px] font-semibold tracking-tight">
 					empowering artists
 				</p>
 				{/* Sub Title */}
-				<p className="text-white text-[72px] font-semibold">
+				<p className="text-white text-[34px] sm:text-[72px] font-semibold text-center">
 					Dream it, Make it
 				</p>
 				{/* Animated text section */}
-				<div className="flex flex-row items-center justify-center gap-3">
+				<div className="flex flex-col sm:flex-row items-center justify-center gap-3">
 					<p className="text-[#dfdfdf]">A discovery engine for</p>
 					<div className="h-10 px-5 flex items-center justify-center rounded-full border border-[#bdbdbd] overflow-hidden">
 						{/* Animated text */}
