@@ -12,7 +12,7 @@ export default function BringingIdeasSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="w-full flex flex-row items-center gap-72 p-24">
+		<div className="w-full flex flex-col sm:flex-row items-center gap-15 sm:gap-72 px-5 sm:px-0 py-15 sm:py-0 sm:p-24">
 			{/* Ideas image group */}
 			<Image
 				src={"/images/ideas-image-group.png"}
@@ -26,20 +26,20 @@ export default function BringingIdeasSection(): React.ReactElement | null {
 				{/* Title wrapper */}
 				<div className="relative w-fit">
 					{/* Title */}
-					<p className="text-[40px] font-semibold text-heading tracking-wide">
+					<p className="text-2xl sm:text-[40px] font-semibold text-heading tracking-wide">
 						Bringing Ideas to Light
 					</p>
 					{/* Brush stroke */}
 					<Image
 						src={"/images/brush-stroke.png"}
 						alt="brush-stroke"
-						className="absolute -bottom-3 right-0 object-contain"
+						className="absolute -bottom-5 sm:-bottom-3 right-0 object-contain"
 						height={5}
 						width={250}
 					/>
 				</div>
 				{/* Description */}
-				<p className="text-[20px]/8 text-description">
+				<p className="sm:text-[20px]/8 text-description">
 					DiMi is a digital space where artists, creatives, and
 					industry professionals come together to connect,
 					collaborate, and thrive. DiMi supports your artistic journey
