@@ -17,25 +17,25 @@ export default function SubscribeForUpdatesSection(): React.ReactElement | null 
 		// Main container
 		<div className="flex flex-col items-center py-10 gap-10">
 			{/* Title wrapper */}
-			<div className="flex flex-col items-center gap-2">
+			<div className="flex flex-col items-center gap-2 px-5 sm:px-0">
 				{/* Title */}
-				<p className="text-primary text-xl uppercase font-medium">
+				<p className="text-primary text-base sm:text-xl uppercase font-medium">
 					become a part of our community
 				</p>
 				{/* Sub title */}
-				<p className="text-[#262626] text-[40px] font-semibold max-w-[750px] text-center">
+				<p className="text-[#262626] text-3xl sm:text-[40px] font-semibold max-w-[750px] text-center">
 					Don’t miss a beat—subscribe for updates from the creative
 					front lines.
 				</p>
 				{/* Sub title */}
-				<p className="text-xl text-description">
+				<p className="text-base sm:text-xl text-description text-center">
 					A passionate team empowering artists and creators worldwide.
 				</p>
 			</div>
 			{/* Subscribe form */}
-			<div className="flex flex-row items-center justify-between gap-5">
+			<div className="flex flex-row items-center justify-between gap-2.5 sm:gap-5">
 				{/* Subscribe input container */}
-				<div className="h-[60px] w-96 rounded-full border border-heading flex flex-row items-center gap-3 px-3">
+				<div className="h-[48px] sm:h-[60px] w-52 sm:w-96 rounded-full border border-heading flex flex-row items-center gap-3 px-3">
 					{/* Search icon */}
 					<Image
 						src={"/icons/search.png"}
@@ -48,7 +48,7 @@ export default function SubscribeForUpdatesSection(): React.ReactElement | null 
 					<input
 						type="email"
 						placeholder="Email Address"
-						className="w-full outline-0"
+						className="w-full outline-0 text-sm sm:text-base"
 						value={email}
 						onChange={(e) => {
 							setEmail(e.target.value)
