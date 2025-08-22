@@ -29,3 +29,9 @@ export type Feature = {
 	description: string
 	image: string
 }
+
+export type Blog = {
+	id: string
+	title: string
+	thumbnail: string | null
+}

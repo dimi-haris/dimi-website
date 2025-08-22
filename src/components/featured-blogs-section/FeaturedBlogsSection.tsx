@@ -1,15 +1,39 @@
 "use client"
 
-import { useCallback } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
+import axios from "axios"
 import Button from "../button/Button"
 import BlogCard from "../blog-card/BlogCard"
+import { Blog } from "@/utils/types"
 
 export default function FeaturedBlogsSection(): React.ReactElement | null {
+	// State for the blogs
+	const [blogs, setBlogs] = useState<Blog[]>([])
+
 	// Memoized callback for handling the Explore More button click
 	const handleExploreMore = useCallback((): void => {
 		console.log("Explore More button clicked")
 	}, [])
+
+	// Fetch featured blogs from the API
+	useEffect(() => {
+		;(async () => {
+			// Initiate a fetch request to the API endpoint
+			await axios
+				.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs`)
+				.then((response) => {
+					// Log the response data
+					console.log(response.data)
+					// Update the blogs state with the fetched data
+					setBlogs(response.data)
+				})
+				.catch((error) => {
+					// Log the error
+					console.error(error)
+				})
+		})()
+	}, []) // Empty array as dependency to only fetch once
 
 	return (
 		// Main container
@@ -38,18 +62,14 @@ export default function FeaturedBlogsSection(): React.ReactElement | null {
 			</div>
 			{/* Blog cards */}
 			<div className="flex flex-col sm:flex-row items-start justify-center gap-5">
-				<BlogCard
-					title="New Art Galleries"
-					image="/images/blog-image-1.png"
-				/>
-				<BlogCard
-					title="New Art Galleries"
-					image="/images/blog-image-2.png"
-				/>
-				<BlogCard
-					title="New Art Galleries"
-					image="/images/blog-image-3.png"
-				/>
+				{blogs.slice(0, 3).map((blog, index) => (
+					<BlogCard
+						id={blog.id}
+						title={blog.title}
+						thumbnail={blog.thumbnail}
+						key={index}
+					/>
+				))}
 			</div>
 			{/* Explore more button */}
 			<Button

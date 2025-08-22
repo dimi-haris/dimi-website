@@ -1,14 +1,7 @@
 import Image from "next/image"
+import { Blog } from "@/utils/types"
 
-// Interface for the props of the component
-interface BlogCardProps {
-	title: string
-	image: string
-}
-
-export default function BlogCard(
-	props: BlogCardProps
-): React.ReactElement | null {
+export default function BlogCard(props: Blog): React.ReactElement | null {
 	return (
 		// Main container
 		<div className="flex flex-col gap-2">
@@ -16,7 +9,11 @@ export default function BlogCard(
 			<div className="flex items-center justify-center bg-[url(/images/card-background.png)] bg-cover bg-center size-[300px] rounded-[15px]">
 				{/* Image */}
 				<Image
-					src={props.image}
+					src={
+						props.thumbnail
+							? props.thumbnail
+							: "/images/blog-image-1.png"
+					}
 					alt="blog-image"
 					className="object-cover size-[212px] rounded-tr-2xl rounded-bl-2xl shadow-2xl"
 					height={212}
