@@ -12,7 +12,7 @@ export default function BringingIdeasSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="w-full flex flex-col sm:flex-row items-center gap-15 sm:gap-72 px-5 sm:px-0 py-15 sm:py-0 sm:p-24">
+		<div className="w-full flex flex-col sm:flex-row items-center gap-15 sm:gap-72 px-5 sm:px-24 py-15 sm:py-24">
 			{/* Ideas image group */}
 			<Image
 				src={"/images/ideas-image-group.png"}
