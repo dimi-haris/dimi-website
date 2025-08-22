@@ -3,13 +3,13 @@ import Image from "next/image"
 export default function OurVisionSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-row items-center gap-72 p-24">
+		<div className="w-full flex flex-col sm:flex-row items-center gap-20 sm:gap-72 px-10 sm:px-24 py-20 sm:py-24">
 			{/* Text container */}
 			<div className="flex-1 flex flex-col justify-center gap-5">
 				{/* Title wrapper */}
 				<div className="relative w-fit">
 					{/* Title */}
-					<p className="text-[40px] font-semibold text-heading tracking-wide">
+					<p className="text-[32px] sm:text-[40px] font-semibold text-heading tracking-wide">
 						Our Vision
 					</p>
 					{/* Brush stroke */}

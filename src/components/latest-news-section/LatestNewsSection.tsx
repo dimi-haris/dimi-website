@@ -39,16 +39,19 @@ export default function LatestNewsSection(): React.ReactElement | null {
 			{/* Blog cards */}
 			<div className="flex flex-row items-start justify-center gap-5">
 				<BlogCard
+					id=""
 					title="New Art Galleries"
-					image="/images/blog-image-1.png"
+					thumbnail="/images/blog-image-1.png"
 				/>
 				<BlogCard
+					id=""
 					title="New Art Galleries"
-					image="/images/blog-image-2.png"
+					thumbnail="/images/blog-image-2.png"
 				/>
 				<BlogCard
+					id=""
 					title="New Art Galleries"
-					image="/images/blog-image-3.png"
+					thumbnail="/images/blog-image-3.png"
 				/>
 			</div>
 			{/* Explore more button */}

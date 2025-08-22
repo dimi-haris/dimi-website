@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function OurMissionSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-row items-center gap-72 p-24">
+		<div className="w-full flex flex-col sm:flex-row items-center gap-20 sm:gap-72 px-10 sm:px-24 py-20 sm:py-24">
 			{/* Our Mission image group */}
 			<Image
 				src={"/images/our-mission-image-group.png"}
@@ -17,7 +17,7 @@ export default function OurMissionSection(): React.ReactElement | null {
 				{/* Title wrapper */}
 				<div className="relative w-fit">
 					{/* Title */}
-					<p className="text-[40px] font-semibold text-heading tracking-wide">
+					<p className="text-[32px] sm:text-[40px] font-semibold text-heading tracking-wide">
 						Our Mission
 					</p>
 					{/* Brush stroke */}

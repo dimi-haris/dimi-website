@@ -27,7 +27,7 @@ export default function OurValuesSection(): React.ReactElement | null {
 				you can thrive in what you create
 			</p>
 			{/* Value cards grid */}
-			<div className="w-full max-w-[1350px] pt-10 grid grid-cols-3 gap-5">
+			<div className="w-full max-w-[1350px] pt-10 grid grid-cols-1 sm:grid-cols-3 gap-5">
 				{ourValues.map((value, key) => (
 					// Value card
 					<ValueCard {...value} key={key} />

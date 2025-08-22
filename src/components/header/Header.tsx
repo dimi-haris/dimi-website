@@ -67,7 +67,13 @@ export default function Header(): React.ReactElement | null {
 				onClick={handleToggleDropDown}
 			>
 				{/* Hamburger menu icon */}
-				<Bars3Icon className="size-6 text-white" />
+				<Bars3Icon
+					className={`size-6 ${
+						pathname === "/" || pathname === "/podcast"
+							? "text-white"
+							: "text-heading"
+					}`}
+				/>
 			</button>
 			{/* Mobile menu */}
 			{isDropDownOpen && (
