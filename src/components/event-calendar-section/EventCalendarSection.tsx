@@ -45,7 +45,7 @@ export default function EventCalendarSection(): React.ReactElement | null {
 		// Main container
 		<div className="flex flex-col items-center gap-15 py-20">
 			{/* Header wrapper */}
-			<div className="w-[1225px] flex flex-row items-center justify-between">
+			<div className="w-fit sm:w-[1225px] flex flex-col sm:flex-row items-start sm:items-center justify-center sm:justify-between gap-5 sm:gap-0">
 				{/* Title wrapper */}
 				<div className="relative w-fit">
 					{/* Title */}
@@ -56,7 +56,7 @@ export default function EventCalendarSection(): React.ReactElement | null {
 					<Image
 						src={"/images/brush-stroke.png"}
 						alt="brush-stroke"
-						className="absolute -bottom-3 right-0 object-contain"
+						className="absolute -bottom-2.5 right-0 object-contain"
 						height={5}
 						width={250}
 					/>
@@ -69,10 +69,10 @@ export default function EventCalendarSection(): React.ReactElement | null {
 				/>
 			</div>
 			{/* Calendar grid */}
-			<div className="grid grid-cols-7">
+			<div className="grid grid-cols-1 sm:grid-cols-7">
 				{/* Empty days */}
 				{Array.from({ length: firstDay }, (_, index) => (
-					<div key={`empty-${index}`} />
+					<div className="hidden sm:flex" key={`empty-${index}`} />
 				))}
 				{/* Calendar days */}
 				{Array.from({ length: daysInMonth }, (_, index) => (

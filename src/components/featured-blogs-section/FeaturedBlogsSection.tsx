@@ -61,7 +61,7 @@ export default function FeaturedBlogsSection(): React.ReactElement | null {
 				</p>
 			</div>
 			{/* Blog cards */}
-			<div className="flex flex-col sm:flex-row items-start justify-center gap-5">
+			<div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-5">
 				{blogs.slice(0, 3).map((blog, index) => (
 					<BlogCard
 						id={blog.id}

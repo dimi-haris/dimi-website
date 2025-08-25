@@ -7,7 +7,7 @@ import SubscribeToBlogsSection from "@/components/subscribe-to-blogs-section/Sub
 export default function Blogs(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-screen flex flex-col py-40">
+		<div className="w-screen flex flex-col py-24 sm:py-40">
 			{/* DiMi blogs banner section */}
 			<DiMiBlogsBannerSection />
 			{/* Featured blogs section */}

@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function DiMiBlogsBannerSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-col gap-10 px-20">
+		<div className="w-full flex flex-col gap-10 px-10 sm:px-20">
 			{/* Title wrapper */}
 			<div className="flex flex-col">
 				{/* Title */}
