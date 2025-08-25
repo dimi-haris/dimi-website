@@ -7,7 +7,7 @@ import SubscribeToBlogsSection from "@/components/subscribe-to-blogs-section/Sub
 export default function Podcast(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-screen flex flex-col items-center gap-20 pb-15">
+		<div className="w-screen flex flex-col items-center gap-10 sm:gap-20 pb-15">
 			{/* Banner image */}
 			<Image
 				src={"/images/podcast-banner.png"}

@@ -36,7 +36,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="w-[90%] flex flex-col gap-5">
+		<div className="w-[85%] sm:w-[90%] flex flex-col gap-5">
 			{/* Podcast platforms */}
 			<div className="flex flex-col gap-2">
 				{/* Title */}
@@ -44,7 +44,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					available on
 				</p>
 				{/* Platform tabs */}
-				<div className="flex flex-row items-center gap-3">
+				<div className="flex flex-row flex-wrap items-center gap-3">
 					{podcastPlatforms.map((platform, key) => (
 						<div
 							className="h-12 w-fit flex flex-row items-center gap-2 px-5 border border-b-2 border-[#bdbdbd] rounded-full cursor-pointer hover:bg-[#e5ab4e47]"
@@ -82,7 +82,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					/>
 				</div>
 				{/* Description */}
-				<p className="text-xl text-description">
+				<p className="text-lg sm:text-xl text-description">
 					Behind every successful artist is a journey—one filled with
 					struggles, challenges, and hard-won victories. These are the
 					stories that inspire, empower, and connect us all.
@@ -108,7 +108,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					inspire the next.
 				</p>
 				{/* Tags */}
-				<div className="flex flex-row items-center gap-3">
+				<div className="flex flex-row flex-wrap items-center gap-3">
 					{podcastTags.map((tag, key) => (
 						<div
 							className="h-12 w-fit flex items-center justify-center px-5 bg-[#E5AB4E47] border-b-2 border-[#bdbdbd] rounded-full cursor-pointer"

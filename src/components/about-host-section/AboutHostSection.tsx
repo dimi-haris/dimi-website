@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function AboutHostSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-[90%] flex flex-col gap-15 pb-15">
+		<div className="w-[85%] sm:w-[90%] flex flex-col gap-15 pb-15">
 			{/* Title wrapper */}
 			<div className="relative w-fit">
 				{/* Title */}
@@ -19,7 +19,7 @@ export default function AboutHostSection(): React.ReactElement | null {
 					width={175}
 				/>
 			</div>
-			<div className="w-full flex flex-row items-center gap-20">
+			<div className="w-full flex flex-col sm:flex-row items-center gap-20">
 				{/* Host image */}
 				<Image
 					src={"/images/host.png"}
