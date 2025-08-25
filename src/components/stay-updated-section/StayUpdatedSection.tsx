@@ -14,13 +14,13 @@ export default function StayUpdatedSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="h-60 w-full bg-[#040607] mt-52 flex flex-row ga-15 items-center justify-between px-15">
+		<div className="h-fit sm:h-60 w-full bg-[#040607] mt-52 flex flex-col sm:flex-row gap-5 sm:gap-0 items-center justify-between px-5 sm:px-15 py-5 sm:py-0">
 			{/* Title */}
 			<p className="text-[40px] text-white font-semibold">
 				Stay updated — straight to your inbox.
 			</p>
 			{/* Email input container */}
-			<div className="h-15 w-[450px] rounded-full border border-[#eaeaea] flex flex-row items-center px-1">
+			<div className="h-15 w-full sm:w-[450px] rounded-full border border-[#eaeaea] flex flex-row items-center px-1">
 				{/* Email input */}
 				<input
 					type="email"

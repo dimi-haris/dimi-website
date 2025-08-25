@@ -37,7 +37,7 @@ export default function FeaturesSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="h-[500px] w-[90%] bg-[#040607] rounded-[80px] self-center flex flex-col items-center justify-between overflow-hidden relative">
+		<div className="h-[1000px] sm:h-[500px] w-[90%] bg-[#040607] rounded-[80px] self-center flex flex-col items-center justify-between overflow-hidden relative">
 			{/* Background mesh top */}
 			<Image
 				src={"/images/background-mesh-top.png"}
@@ -55,9 +55,9 @@ export default function FeaturesSection(): React.ReactElement | null {
 				height={150}
 			/>
 			{/* Overlay container */}
-			<div className="w-full h-full absolute top-0 left-0 z-10 flex flex-row justify-between px-15">
+			<div className="w-full h-full absolute top-0 left-0 z-10 flex flex-col-reverse sm:flex-row justify-between px-5 sm:px-15 pt-15 sm:pt-0">
 				{/* Animated feature image container */}
-				<div className="h-[85%] w-[45%] self-end border-t border-l border-r border-[#E0E0E0] rounded-tr-xl flex items-center justify-center">
+				<div className="h-96 sm:h-[85%] w-full sm:w-[45%] sm:self-end border-t border-l border-r border-[#E0E0E0] rounded-tr-xl flex items-center justify-center p-5 sm:p-0">
 					{/* Animated feature image */}
 					<Image
 						src={features[selectedFeature].image}
@@ -72,7 +72,7 @@ export default function FeaturesSection(): React.ReactElement | null {
 					/>
 				</div>
 				{/* Feature cards */}
-				<div className="w-[50%] flex flex-col items-center justify-center gap-5">
+				<div className="w-full sm:w-[50%] flex flex-col items-center justify-center gap-5">
 					{features.map((feature, index) => (
 						<FeatureCard
 							feature={feature}

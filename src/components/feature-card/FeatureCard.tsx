@@ -35,7 +35,7 @@ export default function FeatureCard(
 					props.selectedFeature === props.index
 						? "text-[#DFDFDF]"
 						: "text-[#454545]"
-				} truncate transition ease-in-out duration-1000`}
+				} sm:truncate transition ease-in-out duration-1000`}
 			>
 				{props.feature.description}
 			</p>
