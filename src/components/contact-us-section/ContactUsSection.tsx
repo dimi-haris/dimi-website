@@ -31,31 +31,31 @@ export default function ContactUsSection(): React.ReactElement | null {
 					Contact Us
 				</p>
 				{/* Sub title */}
-				<p className="text-lg text-description">
+				<p className="text-lg/5 text-description text-center">
 					Any question or remarks? Just write us a message!
 				</p>
 			</div>
 			{/* Contact us form wrapper */}
-			<div className="h-fit w-full max-w-[1250px] bg-[#f9f9f9] rounded-[10px] p-5 flex flex-row gap-7">
+			<div className="h-fit w-full max-w-[1250px] bg-[#f9f9f9] rounded-[10px] p-5 flex flex-col sm:flex-row gap-7">
 				{/* Contact information card */}
-				<div className="flex-1 max-w-[450px] rounded-[10px] bg-card-radial p-5 flex flex-col gap-5">
+				<div className="sm:flex-1 max-w-[450px] rounded-[10px] bg-card-radial p-5 flex flex-col gap-5">
 					{/* Contact information title */}
 					<p className="text-xl text-white font-semibold">
 						Contact Information
 					</p>
 					{/* Email wrapper */}
-					<div className="flex flex-row items-center gap-3">
+					<div className="flex flex-row items-start sm:items-center gap-3">
 						{/* Email icon */}
-						<EnvelopeIcon className="size-4.5 text-white" />
+						<EnvelopeIcon className="size-5 min-h-5 min-w-5 text-white" />
 						{/* Email */}
 						<p className="text-white text-base">
 							publicrelations@godimi.com
 						</p>
 					</div>
 					{/* Address wrapper */}
-					<div className="flex flex-row items-center gap-3">
+					<div className="flex flex-row items-start sm:items-center gap-3">
 						{/* Address icon */}
-						<MapPinIcon className="size-4.5 text-white" />
+						<MapPinIcon className="size-5 min-h-5 min-w-5 text-white" />
 						{/* Address */}
 						<p className="text-white text-base">
 							35 W 31st St, Front A New York, NY 10001, USA
@@ -65,9 +65,9 @@ export default function ContactUsSection(): React.ReactElement | null {
 				{/* Contact us form */}
 				<div className="flex-1 flex flex-col gap-3">
 					{/* Horizontal wrapper */}
-					<div className="w-full flex flex-row items-center gap-5">
+					<div className="w-full flex flex-col sm:flex-row items-center gap-5">
 						{/* Input field wrapper */}
-						<div className="flex-1 flex flex-col gap-1">
+						<div className="w-full flex-1 flex flex-col gap-1">
 							{/* Label */}
 							<p className="text-sm text-[#414651]">Full Name*</p>
 							{/* Input field */}
@@ -79,7 +79,7 @@ export default function ContactUsSection(): React.ReactElement | null {
 							/>
 						</div>
 						{/* Input field wrapper */}
-						<div className="flex-1 flex flex-col gap-1">
+						<div className="w-full flex-1 flex flex-col gap-1">
 							{/* Label */}
 							<p className="text-sm text-[#414651]">Email*</p>
 							{/* Input field */}
@@ -92,7 +92,7 @@ export default function ContactUsSection(): React.ReactElement | null {
 						</div>
 					</div>
 					{/* Input field wrapper */}
-					<div className="flex-1 flex flex-col gap-1">
+					<div className="w-full flex-1 flex flex-col gap-1">
 						{/* Label */}
 						<p className="text-sm text-[#414651]">Category*</p>
 						{/* Select input field container */}
@@ -111,7 +111,7 @@ export default function ContactUsSection(): React.ReactElement | null {
 						</div>
 					</div>
 					{/* Input field wrapper */}
-					<div className="flex-1 flex flex-col gap-1">
+					<div className="w-full flex-1 flex flex-col gap-1">
 						{/* Label */}
 						<p className="text-sm text-[#414651]">Subject*</p>
 						{/* Input field */}
@@ -123,7 +123,7 @@ export default function ContactUsSection(): React.ReactElement | null {
 						/>
 					</div>
 					{/* Input field wrapper */}
-					<div className="flex-1 flex flex-col gap-1">
+					<div className="w-full flex-1 flex flex-col gap-1">
 						{/* Label */}
 						<p className="text-sm text-[#414651]">Description*</p>
 						{/* Textarea input field */}

@@ -10,17 +10,17 @@ export default function FAQs(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="w-screen max-w-[1250px] flex flex-col gap-5 mx-auto px-20 py-36">
+		<div className="w-screen max-w-[1250px] flex flex-col gap-5 mx-auto px-8 sm:px-20 py-36">
 			{/* Breadcrumbs */}
 			<p className="text-[#6B7A85]">DiMi Help Center / Account Setup</p>
 			{/* Title container */}
 			<div className="flex flex-col items-center gap-5">
 				{/* Title */}
-				<p className="text-heading text-[40px] font-semibold tracking-wide">
+				<p className="text-heading text-[40px]/12 font-semibold sm:tracking-wide text-center">
 					Frequently Asked Questions
 				</p>
 				{/* Sub title */}
-				<p className="text-lg text-description">
+				<p className="text-lg text-description text-center">
 					Got questions? We’ve got answers, how DiMi supports you,
 					insights, and everything in between.
 				</p>
@@ -35,23 +35,23 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 1 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 1 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							What is DiMi and why should artists care?
 						</p>
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 1 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 1 answer */}
 					<p
 						className={`${
-							selectedFAQ === 1 ? "h-24" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full text-xl text-description text-start`}
+							selectedFAQ === 1 ? "h-72 sm:h-24" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full text-lg sm:text-xl text-description text-start`}
 					>
 						DiMi is a global platform built for artists of all
 						forms, from musicians and painters to filmmakers,
@@ -70,9 +70,9 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 2 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 2 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							How is DiMi different from social media or portfolio
 							sites?
 						</p>
@@ -80,23 +80,23 @@ export default function FAQs(): React.ReactElement | null {
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 2 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 2 answer wrapper */}
 					<div
 						className={`${
-							selectedFAQ === 2 ? "h-64" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-5 items-start`}
+							selectedFAQ === 2 ? "h-80 sm:h-64" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
 					>
 						{/* FAQ 2 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Social media helps you share your art. DiMi helps
 							you build it, professionally. With DiMi, you don’t
 							just post your work. You:
 						</p>
 						{/* FAQ 2 answer bullet points */}
-						<ul className="text-xl text-description list-disc ml-10 text-start">
+						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>Start or join real projects</li>
 							<li>Generate contracts</li>
 							<li>Secure payments</li>
@@ -104,7 +104,7 @@ export default function FAQs(): React.ReactElement | null {
 							<li>Get funded or supported by real backers</li>
 						</ul>
 						{/* FAQ 2 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Everything is made for artists.
 						</p>
 					</div>
@@ -117,37 +117,37 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 3 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 3 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							What creative problems does DiMi actually solve?
 						</p>
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 3 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 3 answer wrapper */}
 					<div
 						className={`${
-							selectedFAQ === 3 ? "h-60" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-5 items-start`}
+							selectedFAQ === 3 ? "h-96 sm:h-60" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
 					>
 						{/* FAQ 3 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							We’re focused on the 4 core struggles artists face:
 						</p>
 						{/* FAQ 3 answer bullet points */}
-						<ul className="text-xl text-description list-disc ml-10 text-start">
+						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>Struggling to find reliable collaborators</li>
 							<li>No easy way to manage creative projects</li>
 							<li>Risk of unprotected work and unpaid deals</li>
 							<li>Difficulty getting noticed or funded</li>
 						</ul>
 						{/* FAQ 3 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							DiMi fixes this by giving you a verified, all-in-one
 							platform that blends creation, collaboration, and
 							protection — made by creatives, for creatives.
@@ -162,39 +162,39 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 4 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 4 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							Can I trust the people I work with on DiMi?
 						</p>
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 4 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 4 answer wrapper */}
 					<div
 						className={`${
-							selectedFAQ === 4 ? "h-60" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-5 items-start`}
+							selectedFAQ === 4 ? "h-80 sm:h-60" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
 					>
 						{/* FAQ 4 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Yes, we take trust seriously.
 							<br />
 							DiMi includes:
 						</p>
 						{/* FAQ 4 answer bullet points */}
-						<ul className="text-xl text-description list-disc ml-10 text-start">
+						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>Artist verification and optional ID checks</li>
 							<li>Project-based ratings and peer reviews</li>
 							<li>Secure digital contracts for every collab</li>
 							<li>Milestone-based payouts</li>
 						</ul>
 						{/* FAQ 4 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							You’ll know exactly who you’re working with, and
 							under what terms.
 						</p>
@@ -208,9 +208,9 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 5 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 5 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							How will DiMi protect my creative work and make sure
 							I get paid?
 						</p>
@@ -218,21 +218,21 @@ export default function FAQs(): React.ReactElement | null {
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 5 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 5 answer wrapper */}
 					<div
 						className={`${
-							selectedFAQ === 5 ? "h-48" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-5 items-start`}
+							selectedFAQ === 5 ? "h-96 sm:h-48" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
 					>
 						{/* FAQ 5 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Every DiMi project comes with built-in tools for:
 						</p>
 						{/* FAQ 5 answer bullet points */}
-						<ul className="text-xl text-description list-disc ml-10 text-start">
+						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>
 								Customized contracts (covering royalties, IP
 								rights, payment terms, and timelines)
@@ -244,7 +244,7 @@ export default function FAQs(): React.ReactElement | null {
 							</li>
 						</ul>
 						{/* FAQ 5 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							You focus on your craft. DiMi handles the legal and
 							financial side.
 						</p>
@@ -258,9 +258,9 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 6 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 6 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							Can I raise funds or earn support for my projects on
 							DiMi?
 						</p>
@@ -268,22 +268,22 @@ export default function FAQs(): React.ReactElement | null {
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 6 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 6 answer wrapper */}
 					<div
 						className={`${
-							selectedFAQ === 6 ? "h-48" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-5 items-start`}
+							selectedFAQ === 6 ? "h-96 sm:h-48" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
 					>
 						{/* FAQ 6 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Yes! Once our full platform is live, you’ll be able
 							to:
 						</p>
 						{/* FAQ 6 answer bullet points */}
-						<ul className="text-xl text-description list-disc ml-10 text-start">
+						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>Pitch to creative investors for funding</li>
 							<li>
 								Receive support from patrons using DiMi Coins
@@ -295,7 +295,7 @@ export default function FAQs(): React.ReactElement | null {
 							</li>
 						</ul>
 						{/* FAQ 6 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Backers can directly support artists they believe
 							in, without middlemen.
 						</p>
@@ -309,26 +309,26 @@ export default function FAQs(): React.ReactElement | null {
 					}
 				>
 					{/* FAQ 7 title wrapper */}
-					<div className="w-full flex flex-row items-center justify-between">
+					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
 						{/* FAQ 7 title */}
-						<p className="text-heading text-[26px] font-semibold">
+						<p className="text-heading text-[26px] font-semibold text-start">
 							How do I get started with DiMi?
 						</p>
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
 								selectedFAQ === 7 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 text-[#B3B3B3]`}
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
 						/>
 					</div>
 					{/* FAQ 7 answer wrapper */}
 					<div
 						className={`${
-							selectedFAQ === 7 ? "h-80" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-5 items-start`}
+							selectedFAQ === 7 ? "h-96 sm:h-80" : "h-0"
+						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
 					>
 						{/* FAQ 7 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							Right now, we’re opening early access for artists
 							around the world.
 							<br />
@@ -337,7 +337,7 @@ export default function FAQs(): React.ReactElement | null {
 							When we launch, you’ll be able to:
 						</p>
 						{/* FAQ 7 answer bullet points */}
-						<ul className="text-xl text-description list-disc ml-10 text-start">
+						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>Create your profile</li>
 							<li>Launch or join projects</li>
 							<li>Sign contracts</li>
@@ -345,7 +345,7 @@ export default function FAQs(): React.ReactElement | null {
 							<li>Get funded and grow your art</li>
 						</ul>
 						{/* FAQ 7 answer */}
-						<p className="text-xl text-description text-start">
+						<p className="text-lg sm:text-xl text-description text-start">
 							We’re building the future of creative collaboration,
 							and you’re invited.
 						</p>
