@@ -69,7 +69,9 @@ export default function Header(): React.ReactElement | null {
 				{/* Hamburger menu icon */}
 				<Bars3Icon
 					className={`size-6 ${
-						pathname === "/" || pathname === "/podcast"
+						pathname === "/" ||
+						pathname === "/podcast" ||
+						pathname === "/news"
 							? "text-white"
 							: "text-heading"
 					}`}

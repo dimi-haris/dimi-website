@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function News(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-screen flex flex-col items-center pt-40">
+		<div className="w-screen flex flex-col items-center pt-5 sm:pt-40">
 			{/* Banner image */}
 			<Image
 				src={"/images/news-banner.png"}
@@ -13,11 +13,11 @@ export default function News(): React.ReactElement | null {
 				width={1000}
 			/>
 			{/* News wrapper */}
-			<div className="w-full flex flex-col gap-10 px-15 py-10">
+			<div className="w-full flex flex-col gap-10 px-8 sm:px-15 py-8 sm:py-10">
 				{/* News title wrapper */}
-				<div className="w-full flex flex-col">
+				<div className="w-full flex flex-col gap-3.5 sm:gap-0">
 					{/* News title */}
-					<p className="text-[40px] text-heading font-semibold tracking-wide">
+					<p className="text-[30px]/9 sm:text-[40px] text-heading font-semibold sm:tracking-wide">
 						Dream It, Make It Announces Holiday as Host of the
 						Artists Unveiled Podcast
 					</p>
@@ -25,7 +25,7 @@ export default function News(): React.ReactElement | null {
 					<p>July 14, 2025</p>
 				</div>
 				{/* News description */}
-				<p className="text-xl text-description">
+				<p className="text-lg sm:text-xl text-description">
 					<span className="font-bold">Brooklyn, NY</span> — Dream It,
 					Make It is thrilled to announce that celebrated performing
 					artist <span className="font-bold">Holiday</span> will join
@@ -41,7 +41,7 @@ export default function News(): React.ReactElement | null {
 					width={300}
 				/>
 				{/* News description */}
-				<p className="text-xl text-description">
+				<p className="text-lg sm:text-xl text-description">
 					<span className="italic">Artists Unveiled</span> is a
 					bi-weekly podcast that takes listeners behind the curtain
 					into the real lives of performing artists, highlighting
@@ -52,14 +52,14 @@ export default function News(): React.ReactElement | null {
 					performers across disciplines.
 				</p>
 				{/* News description */}
-				<p className="text-xl text-description">
+				<p className="text-lg sm:text-xl text-description">
 					Holiday brings a vibrant presence, deep artistic experience,
 					and a unique empathy for fellow artists to the mic, making
 					her the perfect voice to guide these candid, engaging
 					interviews.
 				</p>
 				{/* News description */}
-				<p className="text-xl text-description">
+				<p className="text-lg sm:text-xl text-description">
 					Coming soon on{" "}
 					<span className="font-bold">
 						Spotify, Apple Podcasts, YouTube, and all major podcast
@@ -76,7 +76,7 @@ export default function News(): React.ReactElement | null {
 					or contact publicrelations@godimi.com.
 				</p>
 				{/* News publisher info */}
-				<p className="text-xl text-description">
+				<p className="text-lg sm:text-xl text-description">
 					<span className="font-bold">Media Contact:</span>
 					<br />
 					publicrelations@godimi.com
