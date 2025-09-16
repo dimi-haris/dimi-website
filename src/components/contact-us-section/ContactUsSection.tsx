@@ -1,10 +1,18 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import axios from "axios"
 import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid"
 import Button from "../button/Button"
 
-export default function ContactUsSection(): React.ReactElement | null {
+// Interface for the props of the component
+interface ContactFormProps {
+	setShowSuccessPopup: (value: boolean) => void
+}
+
+export default function ContactUsSection(
+	props: ContactFormProps
+): React.ReactElement | null {
 	// State for the Full Name
 	const [fullName, setFullName] = useState<string>("")
 	// State for the Email
@@ -16,10 +24,41 @@ export default function ContactUsSection(): React.ReactElement | null {
 	// State for the Description
 	const [description, setDescription] = useState<string>("")
 
-	// Memoized callback for handling the Send Message button click
-	const handleSendMessage = useCallback((): void => {
-		console.log("Send Message button clicked")
+	// Memoized callback for resetting the form
+	const handleResetForm = useCallback((): void => {
+		setFullName("")
+		setEmail("")
+		setTopic("")
+		setSubject("")
+		setDescription("")
 	}, [])
+
+	// Memoized callback for handling the Send Message button click
+	const handleSendMessage = useCallback(async (): Promise<void> => {
+		const payload = {
+			fullName: fullName,
+			email: email,
+			topic: topic,
+			subject: subject,
+			description: description
+		}
+
+		// Initiate a fetch request to the API endpoint
+		await axios
+			.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/contactus`, payload)
+			.then((response) => {
+				// Log the response data
+				console.log(response.data)
+				// Show the success popup
+				props.setShowSuccessPopup(true)
+				// Reset the form
+				handleResetForm()
+			})
+			.catch((error) => {
+				// Log the error
+				console.error(error)
+			})
+	}, [fullName, email, topic, subject, description, handleResetForm, props])
 
 	return (
 		// Main container
@@ -94,7 +133,7 @@ export default function ContactUsSection(): React.ReactElement | null {
 					{/* Input field wrapper */}
 					<div className="w-full flex-1 flex flex-col gap-1">
 						{/* Label */}
-						<p className="text-sm text-[#414651]">Category*</p>
+						<p className="text-sm text-[#414651]">Topic</p>
 						{/* Select input field container */}
 						<div className="flex-1 max-h-10 px-2 bg-white rounded-lg border border-[#D5D7DA]">
 							{/* Select input field */}

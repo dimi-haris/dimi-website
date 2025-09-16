@@ -3,14 +3,23 @@
 import { useState } from "react"
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline"
 import ContactUsSection from "@/components/contact-us-section/ContactUsSection"
+import ContactFormSuccessPopup from "@/components/contact-form-success-popup/ContactFormSuccessPopup"
 
 export default function FAQs(): React.ReactElement | null {
 	// State for the selected FAQ
 	const [selectedFAQ, setSelectedFAQ] = useState<number | null>(null)
+	// State for the contact form success popup visibility
+	const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false)
 
 	return (
 		// Main container
 		<div className="w-screen max-w-[1250px] flex flex-col gap-5 mx-auto px-8 sm:px-20 py-36">
+			{/* Contact form success popup */}
+			{showSuccessPopup && (
+				<ContactFormSuccessPopup
+					setShowSuccessPopup={setShowSuccessPopup}
+				/>
+			)}
 			{/* Breadcrumbs */}
 			<p className="text-[#6B7A85]">DiMi Help Center / Account Setup</p>
 			{/* Title container */}
@@ -385,7 +394,7 @@ export default function FAQs(): React.ReactElement | null {
 				</div>
 			</div>
 			{/* Contact us section */}
-			<ContactUsSection />
+			<ContactUsSection setShowSuccessPopup={setShowSuccessPopup} />
 		</div>
 	)
 }
