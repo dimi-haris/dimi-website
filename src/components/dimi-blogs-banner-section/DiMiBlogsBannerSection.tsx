@@ -7,14 +7,10 @@ export default function DiMiBlogsBannerSection(): React.ReactElement | null {
 			{/* Title wrapper */}
 			<div className="flex flex-col">
 				{/* Title */}
-				<p className="text-[32px]/10 text-primary">DiMi BLOGS</p>
+				<p className="text-[32px]/10 text-primary">DiMi BLOGS:</p>
 				{/* Sub title */}
 				<p className="text-[50px]/13 font-semibold">
-					Analytics Explained:
-				</p>
-				{/* Sub title */}
-				<p className="text-[50px]/13 font-semibold">
-					What every musician should know
+					Create. Connect. Inspire.
 				</p>
 			</div>
 			{/* Banner image */}

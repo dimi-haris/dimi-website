@@ -47,10 +47,10 @@ export const ourValues: OurValue[] = [
 		icon: "/icons/collaborate.png"
 	},
 	{
-		title: "Inclusive",
+		title: "Inclusivity",
 		description:
 			"We believe art fosters understanding, diversity, and the freedom to follow creative aspirations.",
-		icon: "/icons/inclusive.png"
+		icon: "/icons/inclusivity.png"
 	},
 	{
 		title: "Protect",
@@ -100,9 +100,9 @@ export const dreamTeam: TeamMember[] = [
 		image: "/images/hussain-rizvi.png"
 	},
 	{
-		name: "Roger Chan",
+		name: "Roger Chen",
 		designation: "Advisory Board Member",
-		image: "/images/roger-chan.png"
+		image: "/images/roger-chen.png"
 	},
 	{
 		name: "Hedrick Berelson",

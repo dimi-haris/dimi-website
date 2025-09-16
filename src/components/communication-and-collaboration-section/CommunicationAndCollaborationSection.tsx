@@ -4,7 +4,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline"
 export default function CommunicationAndCollaborationSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-col sm:flex-row items-center gap-20 sm:gap-32 p-10 sm:p-20">
+		<div className="w-full flex flex-col sm:flex-row items-center gap-20 sm:gap-40 p-10 sm:p-20">
 			<div className="flex-1 flex flex-col gap-10">
 				{/* Title wrapper */}
 				<div className="relative w-fit">
@@ -29,7 +29,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							Role based custom user views - Creator, Seeker,
-							Investor, Patron
+							Investor, Patron.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -38,7 +38,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							Personalized user views based on art forms, location
-							and user type and art interests
+							and user type and art interests.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -46,7 +46,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Groups and Chat
+							Groups and Chat.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -54,7 +54,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Offer services, entertain custom requests
+							Offer services, entertain custom requests.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -62,7 +62,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Build a fan community, and collaboration
+							Build a fan community, and collaboration.
 						</p>
 					</div>
 				</div>
@@ -72,8 +72,8 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 				src={"/images/communication-and-collaboration.png"}
 				alt="communication-and-collaboration"
 				className="object-contain"
-				width={450}
-				height={450}
+				width={350}
+				height={350}
 			/>
 		</div>
 	)

@@ -43,8 +43,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 1 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 1
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 1 answer */}
@@ -79,8 +81,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 2 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 2
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 2 answer wrapper */}
@@ -125,8 +129,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 3 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 3
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 3 answer wrapper */}
@@ -170,8 +176,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 4 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 4
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 4 answer wrapper */}
@@ -217,8 +225,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 5 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 5
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 5 answer wrapper */}
@@ -267,8 +277,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 6 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 6
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 6 answer wrapper */}
@@ -317,8 +329,10 @@ export default function FAQs(): React.ReactElement | null {
 						{/* Arrow icon */}
 						<ArrowUpCircleIcon
 							className={`${
-								selectedFAQ === 7 ? "rotate-180" : "rotate-0"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10 text-[#B3B3B3]`}
+								selectedFAQ === 7
+									? "rotate-180 text-black"
+									: "rotate-0 text-[#B3B3B3]"
+							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
 						/>
 					</div>
 					{/* FAQ 7 answer wrapper */}

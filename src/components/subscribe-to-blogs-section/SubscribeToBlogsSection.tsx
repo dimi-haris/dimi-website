@@ -30,7 +30,7 @@ export default function SubscribeToBlogsSection(): React.ReactElement | null {
 				A passionate team empowering artists and creators worldwide.
 			</p>
 			{/* Subscribe form */}
-			<div className="w-full flex flex-col sm:flex-row items-center justify-between gap-5">
+			<div className="w-full flex flex-col sm:flex-row items-center justify-center gap-5">
 				{/* Subscribe input container */}
 				<div className="h-[50px] w-[90%] sm:w-96 rounded-full border border-[#bdbdbd] flex flex-row items-center gap-3 px-3">
 					{/* Search icon */}

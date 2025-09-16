@@ -1,14 +1,18 @@
 "use client"
 
 import { useCallback } from "react"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Button from "../button/Button"
 
 export default function BringingIdeasSection(): React.ReactElement | null {
+	// Initialize router instance for navigation
+	const router = useRouter()
+
 	// Memoized callback for handling the Learn More button click
 	const handleLearnMore = useCallback((): void => {
-		console.log("Learn More button clicked")
-	}, [])
+		router.push("/about")
+	}, [router])
 
 	return (
 		// Main container

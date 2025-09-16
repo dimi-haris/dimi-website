@@ -28,7 +28,7 @@ export default function AppLayout({
 				<Image
 					src={"/images/brush-stroke-2.png"}
 					alt="brush-stroke"
-					className="absolute top-24 right-0 object-contain z-0 w-[20%] sm:w-fit"
+					className="absolute top-24 right-0 object-contain z-0 w-[20%] sm:w-[12.5%]"
 					height={535}
 					width={215}
 				/>

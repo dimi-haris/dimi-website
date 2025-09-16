@@ -1,10 +1,19 @@
+"use client"
+
+import { useCallback } from "react"
 import Image from "next/image"
 import { scrollImages } from "@/utils/constants"
+import Button from "../button/Button"
 
 export default function EmpoweringArtistsSection(): React.ReactElement | null {
+	// Memoized callback for handling Explore DiMi Tools button click
+	const handleExploreTools = useCallback((): void => {
+		console.log("Explore DiMi Tools button clicked")
+	}, [])
+
 	return (
 		// Main container
-		<div className="h-fit sm:h-[655px] w-full bg-black rounded-[80px] p-10 sm:p-0 sm:px-20 flex flex-col sm:flex-row gap-10 sm:gap-0 items-center overflow-hidden">
+		<div className="h-fit sm:h-[655px] w-full bg-black rounded-[80px] p-10 sm:p-0 sm:px-20 flex flex-col-reverse sm:flex-row gap-10 sm:gap-0 items-center overflow-hidden">
 			{/* Text container */}
 			<div className="flex flex-col gap-5 sm:gap-10 max-w-[420px] mx-auto">
 				{/* Title */}
@@ -17,6 +26,15 @@ export default function EmpoweringArtistsSection(): React.ReactElement | null {
 					future. Discover tools that help you connect, protect your
 					work, and thrive sustainably in the creative world
 				</p>
+				{/* Explore DiMi Tools button wrapper */}
+				<div className="flex-1 flex justify-end">
+					{/* Explore DiMi Tools button */}
+					<Button
+						title={"Explore DiMi Tools"}
+						color={"primary"}
+						onClick={handleExploreTools}
+					/>
+				</div>
 			</div>
 			{/* Scrolling images wrapper */}
 			<div className="h-[358.5px] sm:h-full w-fit flex flex-row gap-5 overflow-hidden">

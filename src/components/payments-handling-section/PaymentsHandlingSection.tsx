@@ -4,7 +4,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline"
 export default function PaymentsHandlingSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-col sm:flex-row items-center gap-20 sm:gap-32 p-10 sm:p-20">
+		<div className="w-full flex flex-col sm:flex-row items-center gap-20 sm:gap-40 p-10 sm:p-20">
 			<div className="flex-1 flex flex-col gap-10">
 				{/* Title wrapper */}
 				<div className="relative w-fit">
@@ -28,7 +28,7 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							One-to-one payment between seeker and creator
+							One-to-one payment between seeker and creator.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -37,7 +37,7 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							One-to-many payments between seeker and multiple
-							collaborators on a DiMi project
+							collaborators on a DiMi project.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -45,7 +45,7 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Payment module as a microservice
+							Payment module as a microservice.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -53,7 +53,7 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Offer services, entertain custom requests
+							Offer services, entertain custom requests.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -61,7 +61,7 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Multiple modes of Payment available
+							Multiple modes of Payment available.
 						</p>
 					</div>
 				</div>
@@ -71,8 +71,8 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 				src={"/images/payments-handling.png"}
 				alt="payments-handling"
 				className="object-contain"
-				width={450}
-				height={450}
+				width={350}
+				height={350}
 			/>
 		</div>
 	)

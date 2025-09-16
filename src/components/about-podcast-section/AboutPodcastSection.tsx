@@ -87,11 +87,13 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					struggles, challenges, and hard-won victories. These are the
 					stories that inspire, empower, and connect us all.
 					<br />
+					<br />
 					Dream It, Make It- Artists Unveiled, brought to you by DiMi,
 					is a podcast that gives artists a voice to share their
 					unique paths to success. Each episode dives deep into the
 					personal journeys of successful performing artists who dared
 					to dream and turned their visions into reality.
+					<br />
 					<br />
 					Each episode of Artists Unveiled: Passion to Performance
 					brings powerful conversations with creatives from all walks

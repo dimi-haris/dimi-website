@@ -4,14 +4,14 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline"
 export default function ContractManagementSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-col-reverse sm:flex-row items-center gap-20 sm:gap-32 p-10 sm:p-20">
+		<div className="w-full flex flex-col-reverse sm:flex-row items-center gap-20 sm:gap-40 p-10 sm:p-20">
 			{/* Image */}
 			<Image
 				src={"/images/contract-management.png"}
 				alt="contract-management"
 				className="object-contain"
-				width={450}
-				height={450}
+				width={350}
+				height={350}
 			/>
 			<div className="flex-1 flex flex-col gap-10">
 				{/* Title wrapper */}
@@ -36,7 +36,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Standardized Contract Templates
+							Standardized Contract Templates.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -44,7 +44,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Personalized Contracts
+							Personalized Contracts.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -52,7 +52,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Contract Management
+							Contract Management.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -60,7 +60,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Important Version Tracking
+							Important Version Tracking.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -68,7 +68,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Important Version Tracking
+							Important Version Tracking.
 						</p>
 					</div>
 				</div>

@@ -4,14 +4,14 @@ import { CheckCircleIcon } from "@heroicons/react/24/outline"
 export default function ProjectManagementSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="w-full flex flex-col-reverse sm:flex-row items-center gap-20 sm:gap-32 p-10 sm:p-20">
+		<div className="w-full flex flex-col-reverse sm:flex-row items-center gap-20 sm:gap-40 p-10 sm:p-20">
 			{/* Image */}
 			<Image
 				src={"/images/project-management.png"}
 				alt="project-management"
 				className="object-contain"
-				width={450}
-				height={450}
+				width={350}
+				height={350}
 			/>
 			<div className="flex-1 flex flex-col gap-10">
 				{/* Title wrapper */}
@@ -36,7 +36,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Create and showcase personalized projects
+							Create and showcase personalized projects.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -45,7 +45,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							In app collaboration requests for engaging collab
-							partners
+							partners.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -54,7 +54,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							Manage small one-off collaborations to major team
-							productions
+							productions.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -63,7 +63,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							Automated project management system for team and
-							timeline management
+							timeline management.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -71,7 +71,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							In app/email alerts and notifications
+							In app/email alerts and notifications.
 						</p>
 					</div>
 					<div className="flex flex-row items-start sm:items-center gap-3">
@@ -80,7 +80,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							Easy-to-connect to other modules to make business
-							effortless and seamless
+							effortless and seamless.
 						</p>
 					</div>
 				</div>
