@@ -133,17 +133,7 @@ export default function Footer(): React.ReactElement | null {
 					height={40}
 				/>
 				{/* Social media links */}
-				<div className="flex flex-row items-center gap-1">
-					{/* Youtube link */}
-					<Link href={"#"}>
-						<Image
-							src={"/icons/youtube.png"}
-							alt="youtube"
-							className="object-contain"
-							width={35}
-							height={35}
-						/>
-					</Link>
+				<div className="flex flex-row items-center">
 					{/* Instagram link */}
 					<Link href={"#"}>
 						<Image
@@ -164,11 +154,31 @@ export default function Footer(): React.ReactElement | null {
 							height={35}
 						/>
 					</Link>
-					{/* Twitter link */}
+					{/* X link */}
 					<Link href={"#"}>
 						<Image
-							src={"/icons/twitter.png"}
-							alt="twitter"
+							src={"/icons/x.png"}
+							alt="x"
+							className="object-contain"
+							width={35}
+							height={35}
+						/>
+					</Link>
+					{/* LinkedIn link */}
+					<Link href={"#"}>
+						<Image
+							src={"/icons/linked-in.png"}
+							alt="linked-in"
+							className="object-contain"
+							width={35}
+							height={35}
+						/>
+					</Link>
+					{/* Tik Tok link */}
+					<Link href={"#"}>
+						<Image
+							src={"/icons/tik-tok.png"}
+							alt="tik-tok"
 							className="object-contain"
 							width={35}
 							height={35}
