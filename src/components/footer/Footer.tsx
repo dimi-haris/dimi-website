@@ -135,7 +135,10 @@ export default function Footer(): React.ReactElement | null {
 				{/* Social media links */}
 				<div className="flex flex-row items-center">
 					{/* Instagram link */}
-					<Link href={"#"}>
+					<a
+						href="https://www.instagram.com/dimi.app.og"
+						target="_blank"
+					>
 						<Image
 							src={"/icons/instagram.png"}
 							alt="instagram"
@@ -143,9 +146,12 @@ export default function Footer(): React.ReactElement | null {
 							width={35}
 							height={35}
 						/>
-					</Link>
+					</a>
 					{/* Facebook link */}
-					<Link href={"#"}>
+					<a
+						href="https://www.facebook.com/profile.php?id=61573594612081"
+						target="_blank"
+					>
 						<Image
 							src={"/icons/facebook.png"}
 							alt="facebook"
@@ -153,9 +159,9 @@ export default function Footer(): React.ReactElement | null {
 							width={35}
 							height={35}
 						/>
-					</Link>
+					</a>
 					{/* X link */}
-					<Link href={"#"}>
+					<a href="https://www.x.com/dimiapp" target="_blank">
 						<Image
 							src={"/icons/x.png"}
 							alt="x"
@@ -163,9 +169,12 @@ export default function Footer(): React.ReactElement | null {
 							width={35}
 							height={35}
 						/>
-					</Link>
+					</a>
 					{/* LinkedIn link */}
-					<Link href={"#"}>
+					<a
+						href="https://www.linkedin.com/company/dream-it-make-it-inc"
+						target="_blank"
+					>
 						<Image
 							src={"/icons/linked-in.png"}
 							alt="linked-in"
@@ -173,9 +182,12 @@ export default function Footer(): React.ReactElement | null {
 							width={35}
 							height={35}
 						/>
-					</Link>
+					</a>
 					{/* Tik Tok link */}
-					<Link href={"#"}>
+					<a
+						href="https://www.tiktok.com/@godimi.com"
+						target="_blank"
+					>
 						<Image
 							src={"/icons/tik-tok.png"}
 							alt="tik-tok"
@@ -183,7 +195,7 @@ export default function Footer(): React.ReactElement | null {
 							width={35}
 							height={35}
 						/>
-					</Link>
+					</a>
 				</div>
 			</div>
 			{/* Copyright notice */}
