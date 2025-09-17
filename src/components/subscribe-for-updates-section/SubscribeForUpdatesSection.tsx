@@ -66,7 +66,7 @@ export default function SubscribeForUpdatesSection(
 			{/* Subscribe form */}
 			<div className="flex flex-row items-center justify-between gap-2.5 sm:gap-5">
 				{/* Subscribe input container */}
-				<div className="h-[48px] sm:h-[60px] w-52 sm:w-96 rounded-full border border-heading flex flex-row items-center gap-3 px-3">
+				<div className="h-[48px] w-52 sm:w-96 rounded-full border border-heading flex flex-row items-center gap-3 px-3">
 					{/* Search icon */}
 					<Image
 						src={"/icons/search.png"}
@@ -90,7 +90,6 @@ export default function SubscribeForUpdatesSection(
 				<Button
 					title={"Subscribe"}
 					color={"primary"}
-					height="60px"
 					onClick={handleSubscribe}
 				/>
 			</div>

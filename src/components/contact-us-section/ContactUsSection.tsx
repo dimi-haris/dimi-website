@@ -168,7 +168,7 @@ export default function ContactUsSection(
 						{/* Textarea input field */}
 						<textarea
 							rows={3}
-							className="flex-1 min-h-10 px-2 bg-white rounded-lg border border-[#D5D7DA] resize-none"
+							className="flex-1 min-h-10 p-2 bg-white rounded-lg border border-[#D5D7DA] resize-none"
 							value={description}
 							onChange={(e) => setDescription(e.target.value)}
 						/>

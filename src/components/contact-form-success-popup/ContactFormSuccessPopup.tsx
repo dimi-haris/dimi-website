@@ -2,6 +2,7 @@
 
 import { useCallback } from "react"
 import Image from "next/image"
+import Button from "../button/Button"
 
 // Interface for the props of the component
 interface ContactFormSuccessPopupProps {
@@ -50,19 +51,19 @@ export default function ContactFormSuccessPopup(
 				{/* Buttons wrapper */}
 				<div className="w-full flex flex-col sm:flex-row items-center gap-5">
 					{/* Submit another response button */}
-					<button
-						className="h-15 w-full rounded-full cursor-pointer flex items-center justify-center text-lg border border-heading"
+					<Button
+						title={"Submit another response"}
+						color={"outline"}
+						width="100%"
 						onClick={handleSubmitAnotherResponse}
-					>
-						Submit another response
-					</button>
+					/>
 					{/* Got it button */}
-					<button
-						className="h-15 w-full rounded-full cursor-pointer flex items-center justify-center text-lg text-white bg-heading"
+					<Button
+						title={"Got it"}
+						color={"secondary"}
+						width="100%"
 						onClick={handleGotIt}
-					>
-						Got it
-					</button>
+					/>
 				</div>
 			</div>
 		</div>

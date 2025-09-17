@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react"
+import SubscribeFormSuccessPopup from "@/components/subscribe-form-success-popup/SubscribeFormSuccessPopup"
 import StayUpdatedSection from "@/components/stay-updated-section/StayUpdatedSection"
 import CommunicationAndCollaborationSection from "@/components/communication-and-collaboration-section/CommunicationAndCollaborationSection"
 import ProjectManagementSection from "@/components/project-management-section/ProjectManagementSection"
@@ -7,9 +11,18 @@ import ContractManagementSection from "@/components/contract-management-section/
 import TestimonialSection from "@/components/testimonial-section/TestimonialSection"
 
 export default function Services(): React.ReactElement | null {
+	// State for the subscribe form success popup visibility
+	const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false)
+
 	return (
 		// Main container
 		<div className="w-screen flex flex-col items-center pt-60 sm:pt-72 pb-20">
+			{/* Subscribe form success popup */}
+			{showSuccessPopup && (
+				<SubscribeFormSuccessPopup
+					setShowSuccessPopup={setShowSuccessPopup}
+				/>
+			)}
 			{/* Title container */}
 			<div className="flex flex-col items-center gap-2.5 sm:gap-0 px-5 sm:px-0">
 				{/* Title */}
@@ -28,7 +41,7 @@ export default function Services(): React.ReactElement | null {
 				</p>
 			</div>
 			{/* Stay updated section */}
-			<StayUpdatedSection />
+			<StayUpdatedSection setShowSuccessPopup={setShowSuccessPopup} />
 			{/* Communication & Collaboration section */}
 			<CommunicationAndCollaborationSection />
 			{/* Project Management section */}

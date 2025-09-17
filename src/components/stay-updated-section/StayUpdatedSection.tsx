@@ -1,16 +1,47 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import axios from "axios"
 import Button from "../button/Button"
 
-export default function StayUpdatedSection(): React.ReactElement | null {
+// Interface for the props of the component
+interface ContactFormProps {
+	setShowSuccessPopup: (value: boolean) => void
+}
+
+export default function StayUpdatedSection(
+	props: ContactFormProps
+): React.ReactElement | null {
 	// State for the email input
 	const [email, setEmail] = useState<string>("")
 
-	// Memoized callback for handling the Subscribe button click
-	const handleSubscribe = useCallback((): void => {
-		console.log("Subscribe button clicked")
+	// Memoized callback for resetting the form
+	const handleResetForm = useCallback((): void => {
+		setEmail("")
 	}, [])
+
+	// Memoized callback for handling the Subscribe button click
+	const handleSubscribe = useCallback(async (): Promise<void> => {
+		const payload = {
+			email: email
+		}
+
+		// Initiate a fetch request to the API endpoint
+		await axios
+			.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/subscribe`, payload)
+			.then((response) => {
+				// Log the response data
+				console.log(response.data)
+				// Show the success popup
+				props.setShowSuccessPopup(true)
+				// Reset the form
+				handleResetForm()
+			})
+			.catch((error) => {
+				// Log the error
+				console.error(error)
+			})
+	}, [email, props, handleResetForm])
 
 	return (
 		// Main container
