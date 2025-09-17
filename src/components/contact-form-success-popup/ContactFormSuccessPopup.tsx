@@ -25,7 +25,7 @@ export default function ContactFormSuccessPopup(
 
 	return (
 		// Main container
-		<div className="h-full w-full flex items-center justify-center bg-[#1C1C1C08] backdrop-blur-sm fixed top-0 left-0">
+		<div className="h-full w-full flex items-center justify-center bg-[#1C1C1C08] backdrop-blur-sm fixed top-0 left-0 z-50">
 			{/* Popup card */}
 			<div className="h-fit w-[325px] sm:w-[650px] rounded-xl bg-white shadow-2xl flex flex-col gap-5 items-center p-8">
 				{/* Loading icon box */}
