@@ -35,3 +35,17 @@ export type Blog = {
 	title: string
 	thumbnail: string | null
 }
+
+export type NewsItem = {
+	id: string
+	title: string
+	isFeatured: boolean
+	thumbnail: string | null
+	bannerImage: string | null
+	slug: string
+	newsHtml: string
+	date: string
+	createdAt: string
+	updatedAt: string
+	deletedAt: string | null
+}
