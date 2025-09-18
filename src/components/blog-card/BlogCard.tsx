@@ -2,7 +2,16 @@ import Image from "next/image"
 import Link from "next/link"
 import { Blog } from "@/utils/types"
 
-export default function BlogCard(props: Blog): React.ReactElement | null {
+// Interface for the props of the component
+interface BlogCardProps {
+	id: Blog["id"]
+	title: Blog["title"]
+	thumbnail: Blog["thumbnail"]
+}
+
+export default function BlogCard(
+	props: BlogCardProps
+): React.ReactElement | null {
 	return (
 		// Main container
 		<Link href={`/blogs/${props.id}`} className="flex flex-col gap-2">
