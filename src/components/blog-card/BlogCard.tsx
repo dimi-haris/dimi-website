@@ -1,10 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Blog } from "@/utils/types"
 
 export default function BlogCard(props: Blog): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="flex flex-col gap-2">
+		<Link href={`/blogs/${props.id}`} className="flex flex-col gap-2">
 			{/* Card container with background image */}
 			<div className="flex items-center justify-center bg-[url(/images/card-background.png)] bg-cover bg-center size-[300px] rounded-[15px]">
 				{/* Image */}
@@ -21,9 +22,9 @@ export default function BlogCard(props: Blog): React.ReactElement | null {
 				/>
 			</div>
 			{/* Title */}
-			<p className="text-[22px] font-medium text-heading">
+			<p className="text-[22px] font-medium text-heading truncate max-w-[300px]">
 				{props.title}
 			</p>
-		</div>
+		</Link>
 	)
 }

@@ -33,7 +33,15 @@ export type Feature = {
 export type Blog = {
 	id: string
 	title: string
+	isFeatured: boolean
 	thumbnail: string | null
+	bannerImage: string | null
+	slug: string
+	blogHtml: string
+	date: string
+	createdAt: string
+	updatedAt: string
+	deletedAt: string | null
 }
 
 export type NewsItem = {

@@ -7,7 +7,7 @@ import Button from "../button/Button"
 import BlogCard from "../blog-card/BlogCard"
 import { Blog } from "@/utils/types"
 
-export default function FeaturedBlogsSection(): React.ReactElement | null {
+export default function SuggestedBlogsSection(): React.ReactElement | null {
 	// State for the blogs
 	const [blogs, setBlogs] = useState<Blog[]>([])
 
@@ -37,28 +37,21 @@ export default function FeaturedBlogsSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="flex flex-col items-center py-20 gap-10">
+		<div className="w-full flex flex-col items-center px-[70px] pb-20 gap-10">
 			{/* Title wrapper */}
-			<div className="flex flex-col items-center">
-				<div className="relative w-fit">
-					{/* Title */}
-					<p className="text-[32px] sm:text-[40px] font-semibold text-heading tracking-wide">
-						Featured Blogs
-					</p>
-					{/* Brush stroke */}
-					<Image
-						src={"/images/brush-stroke.png"}
-						alt="brush-stroke"
-						className="absolute -bottom-3 right-0 object-contain"
-						height={5}
-						width={250}
-					/>
-				</div>
-				{/* Sub title */}
-				<p className="text-description text-center text-sm sm:text-base px-5 sm:px-0">
-					Browse featured artists, ongoing projects, and success
-					stories.
+			<div className="relative w-fit self-start">
+				{/* Title */}
+				<p className="text-[40px] sm:text-[40px] font-semibold text-heading tracking-wide">
+					Blogs
 				</p>
+				{/* Brush stroke */}
+				<Image
+					src={"/images/brush-stroke.png"}
+					alt="brush-stroke"
+					className="absolute bottom-0 right-0 object-contain"
+					height={5}
+					width={250}
+				/>
 			</div>
 			{/* Blog cards */}
 			<div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-5">
