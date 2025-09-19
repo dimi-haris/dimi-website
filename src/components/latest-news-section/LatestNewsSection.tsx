@@ -1,15 +1,39 @@
 "use client"
 
-import { useCallback } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
+import axios from "axios"
 import Button from "../button/Button"
-import BlogCard from "../blog-card/BlogCard"
+import BlogAndNewsCard from "../blog-and-news-card/BlogAndNewsCard"
+import { NewsItem } from "@/utils/types"
 
 export default function LatestNewsSection(): React.ReactElement | null {
+	// State for the News
+	const [news, setNews] = useState<NewsItem[]>([])
+
 	// Memoized callback for handling the Explore More button click
 	const handleExploreMore = useCallback((): void => {
 		console.log("Explore More button clicked")
 	}, [])
+
+	// Fetch featured news from the API
+	useEffect(() => {
+		;(async () => {
+			// Initiate a fetch request to the API endpoint
+			await axios
+				.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/news`)
+				.then((response) => {
+					// Log the response data
+					console.log(response.data)
+					// Update the news state with the fetched data
+					setNews(response.data)
+				})
+				.catch((error) => {
+					// Log the error
+					console.error(error)
+				})
+		})()
+	}, []) // Empty array as dependency to only fetch once
 
 	return (
 		// Main container
@@ -38,21 +62,15 @@ export default function LatestNewsSection(): React.ReactElement | null {
 			</div>
 			{/* Blog cards */}
 			<div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-5">
-				<BlogCard
-					id=""
-					title="New Art Galleries"
-					thumbnail="/images/blog-image-1.png"
-				/>
-				<BlogCard
-					id=""
-					title="New Art Galleries"
-					thumbnail="/images/blog-image-2.png"
-				/>
-				<BlogCard
-					id=""
-					title="New Art Galleries"
-					thumbnail="/images/blog-image-3.png"
-				/>
+				{news.slice(0, 3).map((newsItem, index) => (
+					<BlogAndNewsCard
+						id={newsItem.id}
+						title={newsItem.title}
+						thumbnail={newsItem.thumbnail}
+						type="news"
+						key={index}
+					/>
+				))}
 			</div>
 			{/* Explore more button */}
 			<Button

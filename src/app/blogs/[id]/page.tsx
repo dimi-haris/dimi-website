@@ -3,7 +3,7 @@
 import { use, useState, useEffect } from "react"
 import axios from "axios"
 import SuggestedBlogsSection from "@/components/suggested-blogs-section/SuggestedBlogsSection"
-import { Blog } from "@/utils/types"
+import { BlogItem } from "@/utils/types"
 
 export default function BlogPost({
 	params
@@ -14,7 +14,7 @@ export default function BlogPost({
 	const { id } = use(params)
 
 	// State for the blog data
-	const [blog, setBlog] = useState<Blog | null>(null)
+	const [blog, setBlog] = useState<BlogItem | null>(null)
 
 	useEffect(() => {
 		;(async () => {

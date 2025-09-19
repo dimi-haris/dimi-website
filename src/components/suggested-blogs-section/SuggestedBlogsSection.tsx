@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import axios from "axios"
 import Button from "../button/Button"
-import BlogCard from "../blog-card/BlogCard"
-import { Blog } from "@/utils/types"
+import BlogAndNewsCard from "../blog-and-news-card/BlogAndNewsCard"
+import { BlogItem } from "@/utils/types"
 
 export default function SuggestedBlogsSection(): React.ReactElement | null {
 	// State for the blogs
-	const [blogs, setBlogs] = useState<Blog[]>([])
+	const [blogs, setBlogs] = useState<BlogItem[]>([])
 
 	// Memoized callback for handling the Explore More button click
 	const handleExploreMore = useCallback((): void => {
@@ -55,8 +55,14 @@ export default function SuggestedBlogsSection(): React.ReactElement | null {
 			</div>
 			{/* Blog cards */}
 			<div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-5">
-				{blogs.slice(0, 3).map((blog, index) => (
-					<BlogCard {...blog} key={index} />
+				{blogs.slice(0, 3).map((blogItem, index) => (
+					<BlogAndNewsCard
+						id={blogItem.id}
+						title={blogItem.title}
+						thumbnail={blogItem.thumbnail}
+						type="blog"
+						key={index}
+					/>
 				))}
 			</div>
 			{/* Explore more button */}

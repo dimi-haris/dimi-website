@@ -30,7 +30,7 @@ export type Feature = {
 	image: string
 }
 
-export type Blog = {
+export type BlogItem = {
 	id: string
 	title: string
 	isFeatured: boolean
