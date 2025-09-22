@@ -118,6 +118,11 @@ export const dreamTeam: TeamMember[] = [
 		name: "Zainab Hameed",
 		designation: "CTO & Director",
 		image: "/images/zainab-hameed.jpg"
+	},
+	{
+		name: "Adeela Khan",
+		designation: "Advisory Board Member",
+		image: "/images/adeela-khan.jpg"
 	}
 ]
 
