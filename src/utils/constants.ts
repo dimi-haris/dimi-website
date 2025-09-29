@@ -101,7 +101,7 @@ export const dreamTeam: TeamMember[] = [
 	},
 	{
 		name: "Roger Chen",
-		designation: "Advisory Board Member",
+		designation: "CFO & Advisory Board Member",
 		image: "/images/roger-chen.png"
 	},
 	{
