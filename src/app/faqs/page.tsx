@@ -4,12 +4,15 @@ import { useState } from "react"
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline"
 import ContactUsSection from "@/components/contact-us-section/ContactUsSection"
 import ContactFormSuccessPopup from "@/components/contact-form-success-popup/ContactFormSuccessPopup"
+import ContactFormErrorPopup from "@/components/contact-form-error-popup/ContactFormErrorPopup"
 
 export default function FAQs(): React.ReactElement | null {
 	// State for the selected FAQ
 	const [selectedFAQ, setSelectedFAQ] = useState<number | null>(null)
 	// State for the contact form success popup visibility
 	const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false)
+	// State for the contact form error popup visibility
+	const [showErrorPopup, setShowErrorPopup] = useState<boolean>(false)
 
 	return (
 		// Main container
@@ -19,6 +22,10 @@ export default function FAQs(): React.ReactElement | null {
 				<ContactFormSuccessPopup
 					setShowSuccessPopup={setShowSuccessPopup}
 				/>
+			)}
+			{/* Contact form error popup */}
+			{showErrorPopup && (
+				<ContactFormErrorPopup setShowErrorPopup={setShowErrorPopup} />
 			)}
 			{/* Breadcrumbs */}
 			<p className="text-[#6B7A85]">DiMi Help Center / Account Setup</p>
@@ -394,7 +401,10 @@ export default function FAQs(): React.ReactElement | null {
 				</div>
 			</div>
 			{/* Contact us section */}
-			<ContactUsSection setShowSuccessPopup={setShowSuccessPopup} />
+			<ContactUsSection
+				setShowSuccessPopup={setShowSuccessPopup}
+				setShowErrorPopup={setShowErrorPopup}
+			/>
 		</div>
 	)
 }

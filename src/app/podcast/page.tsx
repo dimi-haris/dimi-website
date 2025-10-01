@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import SubscribeFormSuccessPopup from "@/components/subscribe-form-success-popup/SubscribeFormSuccessPopup"
+import SubscribeFormErrorPopup from "@/components/subscribe-form-error-popup/SubscribeFormErrorPopup"
 import AboutPodcastSection from "@/components/about-podcast-section/AboutPodcastSection"
 import ComingSoonSection from "@/components/coming-soon-section/ComingSoonSection"
 import AboutHostSection from "@/components/about-host-section/AboutHostSection"
@@ -11,6 +12,8 @@ import SubscribeToBlogsSection from "@/components/subscribe-to-blogs-section/Sub
 export default function Podcast(): React.ReactElement | null {
 	// State for the subscribe form success popup visibility
 	const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false)
+	// State for the subscribe form error popup visibility
+	const [showErrorPopup, setShowErrorPopup] = useState<boolean>(false)
 
 	return (
 		// Main container
@@ -19,6 +22,12 @@ export default function Podcast(): React.ReactElement | null {
 			{showSuccessPopup && (
 				<SubscribeFormSuccessPopup
 					setShowSuccessPopup={setShowSuccessPopup}
+				/>
+			)}
+			{/* Subscribe form error popup */}
+			{showErrorPopup && (
+				<SubscribeFormErrorPopup
+					setShowErrorPopup={setShowErrorPopup}
 				/>
 			)}
 			{/* Banner image */}
@@ -38,6 +47,7 @@ export default function Podcast(): React.ReactElement | null {
 			{/* Subscribe to blogs section */}
 			<SubscribeToBlogsSection
 				setShowSuccessPopup={setShowSuccessPopup}
+				setShowErrorPopup={setShowErrorPopup}
 			/>
 		</div>
 	)

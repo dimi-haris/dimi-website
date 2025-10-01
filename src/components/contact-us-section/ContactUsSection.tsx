@@ -8,6 +8,7 @@ import Button from "../button/Button"
 // Interface for the props of the component
 interface ContactFormProps {
 	setShowSuccessPopup: (value: boolean) => void
+	setShowErrorPopup: (value: boolean) => void
 }
 
 export default function ContactUsSection(
@@ -57,6 +58,10 @@ export default function ContactUsSection(
 			.catch((error) => {
 				// Log the error
 				console.error(error)
+				// Show the error popup
+				props.setShowErrorPopup(true)
+				// Reset the form
+				handleResetForm()
 			})
 	}, [fullName, email, topic, subject, description, handleResetForm, props])
 
@@ -77,28 +82,31 @@ export default function ContactUsSection(
 			{/* Contact us form wrapper */}
 			<div className="h-fit w-full max-w-[1250px] bg-[#f9f9f9] rounded-[10px] p-5 flex flex-col sm:flex-row gap-7">
 				{/* Contact information card */}
-				<div className="sm:flex-1 max-w-[450px] rounded-[10px] bg-card-radial p-5 flex flex-col gap-5">
+				<div className="sm:flex-1 max-w-[450px] rounded-[10px] bg-card-radial p-5 flex flex-col gap-15">
 					{/* Contact information title */}
 					<p className="text-xl text-white font-semibold">
 						Contact Information
 					</p>
-					{/* Email wrapper */}
-					<div className="flex flex-row items-start sm:items-center gap-3">
-						{/* Email icon */}
-						<EnvelopeIcon className="size-5 min-h-5 min-w-5 text-white" />
-						{/* Email */}
-						<p className="text-white text-base">
-							publicrelations@godimi.com
-						</p>
-					</div>
-					{/* Address wrapper */}
-					<div className="flex flex-row items-start sm:items-center gap-3">
-						{/* Address icon */}
-						<MapPinIcon className="size-5 min-h-5 min-w-5 text-white" />
-						{/* Address */}
-						<p className="text-white text-base">
-							35 W 31st St, Front A New York, NY 10001, USA
-						</p>
+					{/* Contact information wrapper */}
+					<div className="w-full flex flex-col gap-5">
+						{/* Email wrapper */}
+						<div className="flex flex-row items-start sm:items-center gap-3">
+							{/* Email icon */}
+							<EnvelopeIcon className="size-5 min-h-5 min-w-5 text-white" />
+							{/* Email */}
+							<p className="text-white text-base">
+								publicrelations@godimi.com
+							</p>
+						</div>
+						{/* Address wrapper */}
+						<div className="flex flex-row items-start sm:items-center gap-3">
+							{/* Address icon */}
+							<MapPinIcon className="size-5 min-h-5 min-w-5 text-white" />
+							{/* Address */}
+							<p className="text-white text-base">
+								35 W 31st St, Front A New York, NY 10001, USA
+							</p>
+						</div>
 					</div>
 				</div>
 				{/* Contact us form */}
@@ -178,7 +186,7 @@ export default function ContactUsSection(
 						{/* Form button */}
 						<Button
 							title={"Send Message"}
-							color={"secondary"}
+							color={"primary"}
 							onClick={handleSendMessage}
 						/>
 					</div>

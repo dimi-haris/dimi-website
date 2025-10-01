@@ -8,6 +8,7 @@ import Button from "../button/Button"
 // Interface for the props of the component
 interface SubscribeFormProps {
 	setShowSuccessPopup: (value: boolean) => void
+	setShowErrorPopup: (value: boolean) => void
 }
 
 export default function SubscribeForUpdatesSection(
@@ -41,6 +42,10 @@ export default function SubscribeForUpdatesSection(
 			.catch((error) => {
 				// Log the error
 				console.error(error)
+				// Show the error popup
+				props.setShowErrorPopup(true)
+				// Reset the form
+				handleResetForm()
 			})
 	}, [email, props, handleResetForm])
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import SubscribeFormSuccessPopup from "@/components/subscribe-form-success-popup/SubscribeFormSuccessPopup"
+import SubscribeFormErrorPopup from "@/components/subscribe-form-error-popup/SubscribeFormErrorPopup"
 import StayUpdatedSection from "@/components/stay-updated-section/StayUpdatedSection"
 import CommunicationAndCollaborationSection from "@/components/communication-and-collaboration-section/CommunicationAndCollaborationSection"
 import ProjectManagementSection from "@/components/project-management-section/ProjectManagementSection"
@@ -13,6 +14,8 @@ import TestimonialSection from "@/components/testimonial-section/TestimonialSect
 export default function Services(): React.ReactElement | null {
 	// State for the subscribe form success popup visibility
 	const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false)
+	// State for the subscribe form error popup visibility
+	const [showErrorPopup, setShowErrorPopup] = useState<boolean>(false)
 
 	return (
 		// Main container
@@ -21,6 +24,12 @@ export default function Services(): React.ReactElement | null {
 			{showSuccessPopup && (
 				<SubscribeFormSuccessPopup
 					setShowSuccessPopup={setShowSuccessPopup}
+				/>
+			)}
+			{/* Subscribe form error popup */}
+			{showErrorPopup && (
+				<SubscribeFormErrorPopup
+					setShowErrorPopup={setShowErrorPopup}
 				/>
 			)}
 			{/* Title container */}
@@ -41,7 +50,10 @@ export default function Services(): React.ReactElement | null {
 				</p>
 			</div>
 			{/* Stay updated section */}
-			<StayUpdatedSection setShowSuccessPopup={setShowSuccessPopup} />
+			<StayUpdatedSection
+				setShowSuccessPopup={setShowSuccessPopup}
+				setShowErrorPopup={setShowErrorPopup}
+			/>
 			{/* Communication & Collaboration section */}
 			<CommunicationAndCollaborationSection />
 			{/* Project Management section */}

@@ -2,14 +2,18 @@
 
 import { useCallback } from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 import { scrollImages } from "@/utils/constants"
 import Button from "../button/Button"
 
 export default function EmpoweringArtistsSection(): React.ReactElement | null {
+	// Initialize router instance for navigation
+	const router = useRouter()
+
 	// Memoized callback for handling Explore DiMi Tools button click
 	const handleExploreTools = useCallback((): void => {
-		console.log("Explore DiMi Tools button clicked")
-	}, [])
+		router.push("/services")
+	}, [router])
 
 	return (
 		// Main container

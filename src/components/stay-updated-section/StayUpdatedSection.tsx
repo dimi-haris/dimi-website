@@ -7,6 +7,7 @@ import Button from "../button/Button"
 // Interface for the props of the component
 interface ContactFormProps {
 	setShowSuccessPopup: (value: boolean) => void
+	setShowErrorPopup: (value: boolean) => void
 }
 
 export default function StayUpdatedSection(
@@ -40,6 +41,10 @@ export default function StayUpdatedSection(
 			.catch((error) => {
 				// Log the error
 				console.error(error)
+				// Show the error popup
+				props.setShowErrorPopup(true)
+				// Reset the form
+				handleResetForm()
 			})
 	}, [email, props, handleResetForm])
 
