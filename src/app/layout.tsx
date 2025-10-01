@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 // Define metadata for SEO
 export const metadata: Metadata = {
-	title: "DiMi",
+	title: "Dream it Make it",
 	description: "Dream it Make it"
 }
 
