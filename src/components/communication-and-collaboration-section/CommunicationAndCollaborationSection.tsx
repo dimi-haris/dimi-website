@@ -22,7 +22,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 					/>
 				</div>
 				{/* Bullet points */}
-				<div className="w-full flex flex-col gap-8">
+				<div className="w-full flex flex-col gap-5">
 					<div className="flex flex-row items-start sm:items-center gap-3">
 						{/* Check circle icon */}
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
@@ -72,8 +72,8 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 				src={"/images/communication-and-collaboration.png"}
 				alt="communication-and-collaboration"
 				className="object-contain"
-				width={350}
-				height={350}
+				width={500}
+				height={500}
 			/>
 		</div>
 	)

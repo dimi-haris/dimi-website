@@ -24,7 +24,7 @@ export default function TroupeSection(): React.ReactElement | null {
 				</div>
 				{/* Sub title */}
 				<p className="text-description text-center">
-					Our values are the foundation of everything we create—so
+					Our values are the foundation of everything we create, so
 					that you can thrive in what you create
 				</p>
 			</div>

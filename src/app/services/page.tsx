@@ -40,13 +40,13 @@ export default function Services(): React.ReactElement | null {
 				</p>
 				{/* Sub title */}
 				<p className="text-3xl sm:text-[50px]/15 text-[#262626] font-semibold max-w-[550px] text-center">
-					Your Complete Art-kit, All in One Place
+					Your Complete Art kit, All in One Place
 				</p>
 				{/* Description */}
 				<p className="text-base sm:text-xl text-description max-w-[550px] text-center">
 					Every DiMi service is crafted with your artistic journey in
-					mind. Scroll down to see how we turn visions into
-					reality—together
+					mind. Scroll down to see how we turn visions into reality
+					together
 				</p>
 			</div>
 			{/* Stay updated section */}

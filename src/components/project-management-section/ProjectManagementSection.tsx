@@ -10,8 +10,8 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 				src={"/images/project-management.png"}
 				alt="project-management"
 				className="object-contain"
-				width={350}
-				height={350}
+				width={500}
+				height={500}
 			/>
 			<div className="flex-1 flex flex-col gap-10">
 				{/* Title wrapper */}
@@ -30,7 +30,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 					/>
 				</div>
 				{/* Bullet points */}
-				<div className="w-full flex flex-col gap-8">
+				<div className="w-full flex flex-col gap-5">
 					<div className="flex flex-row items-start sm:items-center gap-3">
 						{/* Check circle icon */}
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
@@ -44,7 +44,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							In app collaboration requests for engaging collab
+							In-app collaboration requests for engaging collab
 							partners.
 						</p>
 					</div>
@@ -79,7 +79,7 @@ export default function ProjectManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Easy-to-connect to other modules to make business
+							Easy to connect to other modules to make business
 							effortless and seamless.
 						</p>
 					</div>

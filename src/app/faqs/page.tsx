@@ -172,7 +172,7 @@ export default function FAQs(): React.ReactElement | null {
 						<p className="text-lg sm:text-xl text-description text-start">
 							DiMi fixes this by giving you a verified, all-in-one
 							platform that blends creation, collaboration, and
-							protection — made by creatives, for creatives.
+							protection made by creatives, for creatives.
 						</p>
 					</div>
 				</button>
@@ -213,9 +213,9 @@ export default function FAQs(): React.ReactElement | null {
 						{/* FAQ 4 answer bullet points */}
 						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
 							<li>Artist verification and optional ID checks</li>
-							<li>Project-based ratings and peer reviews</li>
+							<li>Project based ratings and peer reviews</li>
 							<li>Secure digital contracts for every collab</li>
-							<li>Milestone-based payouts</li>
+							<li>Milestone based payouts</li>
 						</ul>
 						{/* FAQ 4 answer */}
 						<p className="text-lg sm:text-xl text-description text-start">

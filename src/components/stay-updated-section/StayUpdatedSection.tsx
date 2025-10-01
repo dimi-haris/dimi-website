@@ -53,7 +53,7 @@ export default function StayUpdatedSection(
 		<div className="h-fit sm:h-60 w-full bg-[#040607] mt-52 flex flex-col sm:flex-row gap-5 sm:gap-0 items-center justify-between px-5 sm:px-15 py-5 sm:py-0">
 			{/* Title */}
 			<p className="text-[32px] sm:text-[40px] text-white font-semibold">
-				Stay updated — straight to your inbox.
+				Stay updated, straight to your inbox.
 			</p>
 			{/* Email input container */}
 			<div className="h-15 w-full sm:w-[450px] rounded-full border border-[#eaeaea] flex flex-row items-center px-1">

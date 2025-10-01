@@ -26,7 +26,7 @@ export default function EmpoweringArtistsSection(): React.ReactElement | null {
 				</p>
 				{/* Description */}
 				<p className="text-[#eaeaea] text-sm sm:text-base">
-					At DiMi, you’re not just making art—you’re building a
+					At DiMi, you’re not just making art. You’re building a
 					future. Discover tools that help you connect, protect your
 					work, and thrive sustainably in the creative world
 				</p>

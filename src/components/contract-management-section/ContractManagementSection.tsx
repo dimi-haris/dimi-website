@@ -10,8 +10,8 @@ export default function ContractManagementSection(): React.ReactElement | null {
 				src={"/images/contract-management.png"}
 				alt="contract-management"
 				className="object-contain"
-				width={350}
-				height={350}
+				width={500}
+				height={500}
 			/>
 			<div className="flex-1 flex flex-col gap-10">
 				{/* Title wrapper */}
@@ -30,7 +30,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 					/>
 				</div>
 				{/* Bullet points */}
-				<div className="w-full flex flex-col gap-8">
+				<div className="w-full flex flex-col gap-5">
 					<div className="flex flex-row items-start sm:items-center gap-3">
 						{/* Check circle icon */}
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
@@ -69,6 +69,14 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						{/* Bullet point text */}
 						<p className="text-base text-description">
 							Important Version Tracking.
+						</p>
+					</div>
+					<div className="flex flex-row items-start sm:items-center gap-3">
+						{/* Check circle icon */}
+						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
+						{/* Bullet point text */}
+						<p className="text-base text-description">
+							In-App Notifications.
 						</p>
 					</div>
 				</div>

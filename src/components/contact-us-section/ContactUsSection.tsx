@@ -151,9 +151,9 @@ export default function ContactUsSection(
 								onChange={(e) => setTopic(e.target.value)}
 							>
 								<option value="">Select a topic...</option>
-								<option value="general">Support</option>
-								<option value="account">Sales</option>
-								<option value="technical">Feedback</option>
+								<option value="general">General</option>
+								<option value="account">Account</option>
+								<option value="technical">Technical</option>
 							</select>
 						</div>
 					</div>

@@ -83,13 +83,13 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 				</div>
 				{/* Description */}
 				<p className="text-lg sm:text-xl text-description">
-					Behind every successful artist is a journey—one filled with
+					Behind every successful artist is a journey one filled with
 					struggles, challenges, and hard-won victories. These are the
 					stories that inspire, empower, and connect us all.
 					<br />
 					<br />
-					Dream It, Make It- Artists Unveiled, brought to you by DiMi,
-					is a podcast that gives artists a voice to share their
+					Dream It, Make It - Artists Unveiled, brought to you by
+					DiMi, is a podcast that gives artists a voice to share their
 					unique paths to success. Each episode dives deep into the
 					personal journeys of successful performing artists who dared
 					to dream and turned their visions into reality.
@@ -100,7 +100,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					of life — actors, musicians, dancers, directors, and more.
 					Through candid, heartfelt conversations, we explore the
 					highs, the lows, and the skills that helped these artists
-					thrive. For our listeners—emerging creatives and art
+					thrive. For our listeners emerging creatives and art
 					enthusiasts alike—these stories become a source of
 					inspiration, offering lessons in perseverance, growth, and
 					triumph. It’s more than a podcast; it’s a platform for

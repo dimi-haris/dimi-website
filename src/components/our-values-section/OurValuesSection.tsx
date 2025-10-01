@@ -23,7 +23,7 @@ export default function OurValuesSection(): React.ReactElement | null {
 			</div>
 			{/* Sub title */}
 			<p className="text-base text-white text-center">
-				Our values are the foundation of everything we create—so that
+				Our values are the foundation of everything we create, so that
 				you can thrive in what you create
 			</p>
 			{/* Value cards grid */}
