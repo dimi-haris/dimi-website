@@ -1,8 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
+import axios from "axios"
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline"
 import ContactUsSection from "@/components/contact-us-section/ContactUsSection"
+import FAQFeedbackSuccessPopup from "@/components/faq-feedback-success-popup/FAQFeedbackSuccessPopup"
 import ContactFormSuccessPopup from "@/components/contact-form-success-popup/ContactFormSuccessPopup"
 import ContactFormErrorPopup from "@/components/contact-form-error-popup/ContactFormErrorPopup"
 
@@ -13,10 +15,67 @@ export default function FAQs(): React.ReactElement | null {
 	const [showSuccessPopup, setShowSuccessPopup] = useState<boolean>(false)
 	// State for the contact form error popup visibility
 	const [showErrorPopup, setShowErrorPopup] = useState<boolean>(false)
+	// State for the feedback success popup visibility
+	const [showFeedbackSuccessPopup, setShowFeedbackSuccessPopup] =
+		useState<boolean>(false)
+
+	// Memoized callback for handling the Yes feedback button click
+	const handleYes = useCallback(async (): Promise<void> => {
+		// Initiate a fetch request to the API endpoint
+		await axios
+			.post(
+				`${process.env.NEXT_PUBLIC_API_BASE_URL}/contactus/wasArticleHelpful`,
+				{
+					reply: "yes"
+				}
+			)
+			.then((response) => {
+				// Log the response data
+				console.log(response.data)
+			})
+			.catch((error) => {
+				// Log the error
+				console.error(error)
+			})
+			.finally(() => {
+				// Show success popup
+				setShowFeedbackSuccessPopup(true)
+			})
+	}, [])
+
+	// Memoized callback for handling the No feedback button click
+	const handleNo = useCallback(async (): Promise<void> => {
+		// Initiate a fetch request to the API endpoint
+		await axios
+			.post(
+				`${process.env.NEXT_PUBLIC_API_BASE_URL}/contactus/wasArticleHelpful`,
+				{
+					reply: "no"
+				}
+			)
+			.then((response) => {
+				// Log the response data
+				console.log(response.data)
+			})
+			.catch((error) => {
+				// Log the error
+				console.error(error)
+			})
+			.finally(() => {
+				// Show success popup
+				setShowFeedbackSuccessPopup(true)
+			})
+	}, [])
 
 	return (
 		// Main container
 		<div className="w-screen max-w-[1250px] flex flex-col gap-5 mx-auto px-8 sm:px-20 py-36">
+			{/* Contact form success popup */}
+			{showFeedbackSuccessPopup && (
+				<FAQFeedbackSuccessPopup
+					setShowFeedbackSuccessPopup={setShowFeedbackSuccessPopup}
+				/>
+			)}
 			{/* Contact form success popup */}
 			{showSuccessPopup && (
 				<ContactFormSuccessPopup
@@ -391,11 +450,17 @@ export default function FAQs(): React.ReactElement | null {
 				{/* FAQ footer answer options */}
 				<div className="flex flex-row items-center justify-center">
 					{/* FAQ footer answer button */}
-					<button className="h-10 w-32 rounded-full cursor-pointer border border-[#BDBDBD] flex items-center justify-center">
+					<button
+						className="h-10 w-32 rounded-full cursor-pointer border border-[#BDBDBD] flex items-center justify-center"
+						onClick={handleYes}
+					>
 						<p className="text-lg text-heading font-medium">Yes</p>
 					</button>
 					{/* FAQ footer answer button */}
-					<button className="h-10 w-32 rounded-full cursor-pointer border border-[#BDBDBD] flex items-center justify-center">
+					<button
+						className="h-10 w-32 rounded-full cursor-pointer border border-[#BDBDBD] flex items-center justify-center"
+						onClick={handleNo}
+					>
 						<p className="text-lg text-heading font-medium">No</p>
 					</button>
 				</div>

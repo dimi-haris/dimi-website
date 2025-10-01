@@ -67,7 +67,10 @@ export default function ContactUsSection(
 
 	return (
 		// Main container
-		<div className="w-full flex flex-col items-center gap-10">
+		<div
+			className="w-full flex flex-col items-center gap-10"
+			id="contact-us"
+		>
 			{/* Title wrapper */}
 			<div className="flex flex-col items-center">
 				{/* Title */}
@@ -83,10 +86,17 @@ export default function ContactUsSection(
 			<div className="h-fit w-full max-w-[1250px] bg-[#f9f9f9] rounded-[10px] p-5 flex flex-col sm:flex-row gap-7">
 				{/* Contact information card */}
 				<div className="sm:flex-1 max-w-[450px] rounded-[10px] bg-card-radial p-5 flex flex-col gap-15">
-					{/* Contact information title */}
-					<p className="text-xl text-white font-semibold">
-						Contact Information
-					</p>
+					{/* Contact information title wrapper */}
+					<div className="w-full flex flex-col">
+						{/* Contact information title */}
+						<p className="text-xl text-white font-semibold">
+							Contact Information
+						</p>
+						{/* Contact information sub title */}
+						<p className="text-sm text-[#BDBDBD]">
+							Say something to start a live chat!
+						</p>
+					</div>
 					{/* Contact information wrapper */}
 					<div className="w-full flex flex-col gap-5">
 						{/* Email wrapper */}

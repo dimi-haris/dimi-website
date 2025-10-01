@@ -29,8 +29,8 @@ export default function About(): React.ReactElement | null {
 			<div className="w-full max-w-[825px] self-center flex flex-col gap-5 pt-52 px-10">
 				{/* Content */}
 				<p className="text-[22px] sm:text-[32px] text-heading">
-					At DiMi, we believe artists deserve more than survival—they
-					deserve to thrive.{" "}
+					At DiMi, we believe artists deserve more than survival -
+					they deserve to thrive.{" "}
 					<span className="text-[#42718D]">
 						That’s why we’re building tools, community, and
 						opportunities to change the story.

@@ -1,18 +1,27 @@
 "use client"
 
-import React from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
+import Script from "next/script"
+import axios from "axios"
 import PodcastEpisodeSection from "@/components/podcast-episode-section/PodcastEpisodeSection"
 
 interface Episode {
 	id: number
 	title: string
-	author: string
+	artist: string
 	season: string
 	episode: string
-	duration: string
-	description: string
-	isPlaying?: boolean
+	host: string
+	airDate: string
+	tags: string[] | null
+	length: string
+	playlist: string
+	youtube_link: string | null
+	tiktok_link: string | null
+	spotify_link: string | null
+	apple_link: string | null
+	podcastHtml: string
 }
 
 interface Platform {
@@ -21,45 +30,7 @@ interface Platform {
 }
 
 const PodcastEpisodePage: React.FC = () => {
-	const episodes: Episode[] = [
-		{
-			id: 1,
-			title: "Jared: Finding Art Within Nature",
-			author: "Holiday",
-			season: "S1",
-			episode: "Episode 01",
-			duration: "01:10:56",
-			description: "How his life revolves around art",
-			isPlaying: true
-		},
-		{
-			id: 2,
-			title: "Zayn: Finding Art Within Nature",
-			author: "Holiday",
-			season: "S1",
-			episode: "Episode 02",
-			duration: "01:10:56",
-			description: "How his life revolves around art"
-		},
-		{
-			id: 3,
-			title: "Roger: Finding Art Within Nature",
-			author: "Holiday",
-			season: "S1",
-			episode: "Episode 03",
-			duration: "01:10:56",
-			description: "How his life revolves around art"
-		},
-		{
-			id: 4,
-			title: "Mike: Invest in art tools",
-			author: "Holiday",
-			season: "S1",
-			episode: "Episode 04",
-			duration: "01:10:56",
-			description: "How his life revolves around art"
-		}
-	]
+	const [episodes, setEpisodes] = useState<Episode[]>([])
 
 	const platforms: Platform[] = [
 		{ name: "Youtube", icon: "/icons/youtube-dark.png" },
@@ -67,15 +38,34 @@ const PodcastEpisodePage: React.FC = () => {
 		{ name: "Amazon", icon: "/icons/amazon.png" },
 		{ name: "Apple Podcast", icon: "/icons/apple-podcast.png" }
 	]
+
+	// Fetch episodes from the API
+	useEffect(() => {
+		;(async () => {
+			// Initiate a fetch request to the API endpoint
+			await axios
+				.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/podcasts`)
+				.then((response) => {
+					// Log the response data
+					console.log(response.data)
+					// Update the blogs state with the fetched data
+					setEpisodes(response.data)
+				})
+				.catch((error) => {
+					// Log the error
+					console.error(error)
+				})
+		})()
+	}, []) // Empty array as dependency to only fetch once
+
 	return (
 		<div className="w-screen flex flex-col items-center gap-10 sm:gap-20 pb-15">
-			<Image
-				src={"/images/podcast-banner.png"}
-				alt="podcast-banner"
-				className="object-contain h-fit w-full"
-				height={500}
-				width={1000}
-			/>
+			<div id="buzzsprout-large-player" className="w-full mt-32"></div>
+			<Script
+				type="text/javascript"
+				charSet="utf-8"
+				src="https://www.buzzsprout.com/2539502.js?container_id=buzzsprout-large-player&player=large"
+			></Script>
 			{/* Podcast Section */}
 			<div className="w-[85%] sm:w-[90%] flex flex-col gap-5">
 				<PodcastEpisodeSection />
@@ -130,71 +120,32 @@ const PodcastEpisodePage: React.FC = () => {
 									<div className="col-span-5 flex items-center gap-3">
 										{/* Play/Pause Button */}
 										<button
-											className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition ${
-												episode.isPlaying
-													? "bg-[#E5AB4E]"
-													: "bg-[#FFF] "
-											}`}
-											aria-label={
-												episode.isPlaying
-													? "Pause"
-													: "Play"
-											}
+											className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition bg-[#FFF]"
+											aria-label={"Play"}
 										>
-											{episode.isPlaying ? (
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="12"
-													height="12"
-													viewBox="0 0 12 12"
-													fill="none"
-												>
-													<g>
-														<path
-															d="M5.0625 0.374878H1.78125V11.6249H5.0625V0.374878Z"
-															fill="white"
-														/>
-														<path
-															d="M10.2188 0.374878H6.9375V11.6249H10.2188V0.374878Z"
-															fill="white"
-														/>
-													</g>
-													<defs>
-														<clipPath id="clip0_372_1107">
-															<rect
-																width="11.25"
-																height="11.25"
-																fill="white"
-																transform="translate(0.375 0.374878)"
-															/>
-														</clipPath>
-													</defs>
-												</svg>
-											) : (
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="15"
-													height="15"
-													viewBox="0 0 15 15"
-													fill="none"
-												>
-													<path
-														d="M13.0931 5.91503L3.875 0.0300293V14.9932L13.0894 9.08753C13.3576 8.91892 13.5787 8.6851 13.7321 8.4079C13.8855 8.13069 13.9662 7.81913 13.9665 7.50231C13.9669 7.1855 13.887 6.87375 13.7343 6.59618C13.5815 6.31861 13.361 6.08427 13.0931 5.91503Z"
-														fill="#737373"
-													/>
-												</svg>
-											)}
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="15"
+												height="15"
+												viewBox="0 0 15 15"
+												fill="none"
+											>
+												<path
+													d="M13.0931 5.91503L3.875 0.0300293V14.9932L13.0894 9.08753C13.3576 8.91892 13.5787 8.6851 13.7321 8.4079C13.8855 8.13069 13.9662 7.81913 13.9665 7.50231C13.9669 7.1855 13.887 6.87375 13.7343 6.59618C13.5815 6.31861 13.361 6.08427 13.0931 5.91503Z"
+													fill="#737373"
+												/>
+											</svg>
 										</button>
 
 										{/* Thumbnail */}
 										<div className="relative flex-shrink-0">
-											<img
+											<Image
 												src={
 													"/images/podcast-Episode.png"
 												}
 												alt={episode.title}
-												width="64"
-												height="64"
+												width={"64"}
+												height={"64"}
 												className="rounded-lg object-cover"
 											/>
 										</div>
@@ -205,14 +156,14 @@ const PodcastEpisodePage: React.FC = () => {
 												{episode.title}
 											</h3>
 											<div className="flex items-center gap-2 text-sm text-[#BDBDBD]">
-												<span>{episode.author}</span>
+												<span>{episode.artist}</span>
 											</div>
 											<div className="flex items-center gap-2 text-xs  mt-1">
 												<span>{episode.season}</span>
 												<span>•</span>
 												<span>{episode.episode}</span>
 												<span className="ml-auto text-[#BDBDBD]">
-													{episode.duration}
+													{episode.length}
 												</span>
 											</div>
 										</div>
@@ -221,7 +172,7 @@ const PodcastEpisodePage: React.FC = () => {
 									{/* Description */}
 									<div className="col-span-4">
 										<p className="text-base font-medium  text-description">
-											{episode.description}
+											{episode.playlist}
 										</p>
 									</div>
 
@@ -238,11 +189,11 @@ const PodcastEpisodePage: React.FC = () => {
 															platform.name
 														}
 													>
-														<img
+														<Image
 															src={platform.icon}
 															alt={platform.name}
-															width="16"
-															height="16"
+															width={"16"}
+															height={"16"}
 														/>
 													</button>
 												)

@@ -5,7 +5,10 @@ import { dreamTeam } from "@/utils/constants"
 export default function DreamTeamSection(): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="flex flex-col gap-15 items-center pt-24 sm:pt-36 px-5 sm:px-20">
+		<div
+			className="flex flex-col gap-15 items-center pt-24 sm:pt-36 px-5 sm:px-20"
+			id="team"
+		>
 			{/* Title wrapper */}
 			<div className="flex flex-col items-center gap-2.5 sm:gap-0">
 				<div className="relative w-fit">

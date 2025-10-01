@@ -8,7 +8,7 @@ export default function TestimonialSection(): React.ReactElement | null {
 				Seamless Tools, So You Can Focus on Making Art and Building
 				Meaningful Connections.”
 				<br />
-				<br /> — <span className="font-bold">Hussain Rizvi</span>, CEO &
+				<br /> - <span className="font-bold">Hussain Rizvi</span>, CEO &
 				Chairperson, DiMi
 			</p>
 		</div>

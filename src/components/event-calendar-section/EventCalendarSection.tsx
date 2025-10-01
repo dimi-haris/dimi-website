@@ -43,7 +43,7 @@ export default function EventCalendarSection(): React.ReactElement | null {
 
 	return (
 		// Main container
-		<div className="flex flex-col items-center gap-15 py-20">
+		<div className="flex flex-col items-center gap-15 py-20" id="calendar">
 			{/* Header wrapper */}
 			<div className="w-fit sm:w-[1225px] flex flex-col sm:flex-row items-start sm:items-center justify-center sm:justify-between gap-5 sm:gap-0">
 				{/* Title wrapper */}

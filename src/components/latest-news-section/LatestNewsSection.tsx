@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import axios from "axios"
-import Button from "../button/Button"
+// import Button from "../button/Button"
 import BlogAndNewsCard from "../blog-and-news-card/BlogAndNewsCard"
 import { NewsItem } from "@/utils/types"
 
@@ -12,9 +12,9 @@ export default function LatestNewsSection(): React.ReactElement | null {
 	const [news, setNews] = useState<NewsItem[]>([])
 
 	// Memoized callback for handling the Explore More button click
-	const handleExploreMore = useCallback((): void => {
-		console.log("Explore More button clicked")
-	}, [])
+	// const handleExploreMore = useCallback((): void => {
+	// 	console.log("Explore More button clicked")
+	// }, [])
 
 	// Fetch featured news from the API
 	useEffect(() => {
@@ -73,11 +73,11 @@ export default function LatestNewsSection(): React.ReactElement | null {
 				))}
 			</div>
 			{/* Explore more button */}
-			<Button
+			{/* <Button
 				title={"Explore More"}
 				color={"primary"}
 				onClick={handleExploreMore}
-			/>
+			/> */}
 		</div>
 	)
 }

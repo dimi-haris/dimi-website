@@ -68,14 +68,6 @@ export default function ContractManagementSection(): React.ReactElement | null {
 						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
 						{/* Bullet point text */}
 						<p className="text-base text-description">
-							Important Version Tracking.
-						</p>
-					</div>
-					<div className="flex flex-row items-start sm:items-center gap-3">
-						{/* Check circle icon */}
-						<CheckCircleIcon className="size-8 min-h-8 min-w-8 text-primary" />
-						{/* Bullet point text */}
-						<p className="text-base text-description">
 							In-App Notifications.
 						</p>
 					</div>

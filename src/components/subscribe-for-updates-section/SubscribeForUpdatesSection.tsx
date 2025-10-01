@@ -60,7 +60,7 @@ export default function SubscribeForUpdatesSection(
 				</p>
 				{/* Sub title */}
 				<p className="text-[#262626] text-3xl sm:text-[40px] font-semibold max-w-[750px] text-center">
-					Don’t miss a beat—subscribe for updates from the creative
+					Don’t miss a beat - subscribe for updates from the creative
 					front lines.
 				</p>
 				{/* Sub title */}

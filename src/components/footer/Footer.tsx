@@ -21,7 +21,7 @@ export default function Footer(): React.ReactElement | null {
 					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
-							href={"#"}
+							href={"/about#team"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Team
@@ -43,25 +43,25 @@ export default function Footer(): React.ReactElement | null {
 					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
-							href={"#"}
+							href={"/news"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							News
 						</Link>
 						<Link
-							href={"#"}
+							href={"/blogs"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Blog
 						</Link>
 						<Link
-							href={"#"}
+							href={"/podcast"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Podcasts
 						</Link>
 						<Link
-							href={"#"}
+							href={"/blogs#calendar"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Calendar
@@ -109,13 +109,13 @@ export default function Footer(): React.ReactElement | null {
 					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
-							href={"#"}
+							href={"/faqs#contact-us"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Contact
 						</Link>
 						<Link
-							href={"#"}
+							href={"/faqs"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Help & Support

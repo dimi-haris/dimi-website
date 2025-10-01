@@ -12,7 +12,7 @@ export default function ComingSoonSection(): React.ReactElement | null {
 				</span>
 				<br />
 				<br className="sm:hidden flex" />
-				<span className="italic">DiMi Podcast</span> is coming —
+				<span className="italic">DiMi Podcast</span> is coming -{" "}
 				featuring the artists and collaborators shaping the future of
 				art.
 				<br />

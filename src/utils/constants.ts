@@ -148,13 +148,13 @@ export const features: Feature[] = [
 	{
 		title: "Onsite Chatbot Virtual Assistance",
 		description:
-			"Your creative sidekick—ready 24/7 to guide you through DiMi, so you never miss a beat.",
+			"Your creative sidekick - ready 24/7 to guide you through DiMi, so you never miss a beat.",
 		image: "/images/chatbot.png"
 	},
 	{
 		title: "In app one to one and group chats",
 		description:
-			"Collaborate in real-time with fellow NYC creatives—whether it’s one-on-one or your whole project crew.",
+			"Collaborate in real-time with fellow NYC creatives - whether it’s one-on-one or your whole project crew.",
 		image: "/images/group-chat.png"
 	},
 	{

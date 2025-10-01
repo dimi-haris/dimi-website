@@ -8,23 +8,23 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 			{
 				name: "Youtube",
 				image: "/icons/youtube-dark.png",
-				url: "#"
-			},
-			{
-				name: "Spotify",
-				image: "/icons/spotify.png",
-				url: "#"
-			},
-			{
-				name: "Amazon",
-				image: "/icons/amazon.png",
-				url: "#"
-			},
-			{
-				name: "Apple Podcast",
-				image: "/icons/apple-podcast.png",
-				url: "#"
+				url: "https://www.youtube.com/watch?v=Q00xEQtMkjc"
 			}
+			// {
+			// 	name: "Spotify",
+			// 	image: "/icons/spotify.png",
+			// 	url: "#"
+			// },
+			// {
+			// 	name: "Amazon",
+			// 	image: "/icons/amazon.png",
+			// 	url: "#"
+			// },
+			// {
+			// 	name: "Apple Podcast",
+			// 	image: "/icons/apple-podcast.png",
+			// 	url: "#"
+			// }
 		],
 		[]
 	)
@@ -46,8 +46,10 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 				{/* Platform tabs */}
 				<div className="flex flex-row flex-wrap items-center gap-3">
 					{podcastPlatforms.map((platform, key) => (
-						<div
+						<a
 							className="h-12 w-fit flex flex-row items-center gap-2 px-5 border border-b-2 border-[#bdbdbd] rounded-full cursor-pointer hover:bg-[#e5ab4e47]"
+							href={platform.url}
+							target="_blank"
 							key={key}
 						>
 							<Image
@@ -60,7 +62,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 							<p className="text-lg text-description font-medium">
 								{platform.name}
 							</p>
-						</div>
+						</a>
 					))}
 				</div>
 			</div>
@@ -97,11 +99,11 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					<br />
 					Each episode of Artists Unveiled: Passion to Performance
 					brings powerful conversations with creatives from all walks
-					of life — actors, musicians, dancers, directors, and more.
+					of life - actors, musicians, dancers, directors, and more.
 					Through candid, heartfelt conversations, we explore the
 					highs, the lows, and the skills that helped these artists
 					thrive. For our listeners emerging creatives and art
-					enthusiasts alike—these stories become a source of
+					enthusiasts alike - these stories become a source of
 					inspiration, offering lessons in perseverance, growth, and
 					triumph. It’s more than a podcast; it’s a platform for
 					creative exchange, where shared experiences fuel passion,
