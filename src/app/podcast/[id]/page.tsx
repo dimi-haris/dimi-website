@@ -1,9 +1,9 @@
 "use client"
 
-import { use, useState, useEffect, useMemo } from "react"
+import { use, useState, useEffect, useMemo, useCallback } from "react"
 import Image from "next/image"
-import Script from "next/script"
 import axios from "axios"
+import { PlayIcon } from "@heroicons/react/24/solid"
 import PodcastPlatformPill from "@/components/podcast-platform-pill/PodcastPlatformPill"
 import TagPill from "@/components/tag-pill/TagPill"
 import PodcastPlaylist from "@/components/podcast-playlist/PodcastPlaylist"
@@ -19,6 +19,18 @@ export default function PodcastEpisodeByID({
 
 	// State for the podcast data
 	const [podcast, setPodcast] = useState<PodcastEpisode | null>(null)
+	// State for the podcast trailer video play status
+	const [isPlaying, setIsPlaying] = useState<boolean>(false)
+
+	// Memoized callback for playing the podcast trailer video
+	const handlePlay = useCallback((): void => {
+		setIsPlaying(true)
+	}, [])
+
+	// Memoized callback for pausing the podcast trailer video
+	const handleStop = useCallback((): void => {
+		setIsPlaying(false)
+	}, [])
 
 	const podcastDate = useMemo(() => {
 		return podcast?.airDate
@@ -55,14 +67,40 @@ export default function PodcastEpisodeByID({
 
 	return (
 		// Main container
-		<div className="min-h-screen w-screen flex flex-col gap-15 pt-5 sm:pt-40">
-			{/* Buzzsprout player script */}
-			<Script
-				type="text/javascript"
-				src="https://www.buzzsprout.com/2539502.js?container_id=buzzsprout-large-player&player=large"
-			/>
-			{/* Buzzsprout player container */}
-			<div id="buzzsprout-large-player" className="w-full" />
+		<div className="min-h-screen w-screen flex flex-col gap-15">
+			{/* Podcast trailer video container */}
+			<div className="h-[750px] w-full relative">
+				{!isPlaying && (
+					<button
+						className="size-20 rounded-full cursor-pointer bg-[#66666633] backdrop-blur-sm flex items-center justify-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10"
+						onClick={handlePlay}
+					>
+						{/* Play icons */}
+						<PlayIcon className="size-8 text-white" />
+					</button>
+				)}
+				{isPlaying ? (
+					<video
+						className="h-full w-full object-cover"
+						autoPlay
+						playsInline
+						onEnded={handleStop}
+					>
+						<source
+							src={"/videos/podcast-trailer.mp4"}
+							type="video/mp4"
+						/>
+					</video>
+				) : (
+					<Image
+						src={"/images/trailer-thumbnail.jpg"}
+						alt="trailer-thumbnail"
+						className="object-cover h-full w-full"
+						height={650}
+						width={1280}
+					/>
+				)}
+			</div>
 			{/* Podcast wrapper */}
 			<div className="w-full flex flex-col gap-20 pb-20">
 				{/* Wrapper */}
