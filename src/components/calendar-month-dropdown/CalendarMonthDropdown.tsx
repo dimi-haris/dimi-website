@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react"
-import Image from "next/image"
+import { ChevronDownIcon } from "@heroicons/react/24/outline"
 
 // Interface for the props of the component
 interface CalendarMonthDropdownProps {
@@ -30,12 +30,7 @@ export default function CalendarMonthDropdown(
 			{/* Selected month */}
 			<p className="text-lg font-medium">{props.selectedMonth}</p>
 			{/* Down arrow */}
-			<Image
-				src={"/icons/down-arrow.svg"}
-				alt="down-arrow"
-				width={20}
-				height={20}
-			/>
+			<ChevronDownIcon className="size-6 text-black" />
 			{/* Month dropdown */}
 			{isMonthDropdownVisible && (
 				<div className="absolute top-12 left-2 h-fit w-48 bg-white rounded-lg shadow-2xl flex flex-col gap-1 items-start px-5 py-2">

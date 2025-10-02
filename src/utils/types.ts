@@ -57,3 +57,22 @@ export type NewsItem = {
 	updatedAt: string
 	deletedAt: string | null
 }
+
+export type PodcastEpisode = {
+	id: number
+	podcast_thumbnail: string | null
+	title: string
+	artist: string
+	season: string
+	episode: string
+	host: string
+	airDate: string
+	tags: string[] | null
+	length: string
+	playlist: string
+	youtube_link: string | null
+	tiktok_link: string | null
+	spotify_link: string | null
+	apple_link: string | null
+	podcastHtml: string
+}

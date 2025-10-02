@@ -47,7 +47,7 @@ export default function Header(): React.ReactElement | null {
 			{/* Navigation links */}
 			<div
 				className={`hidden sm:flex flex-row items-center justify-center gap-5 text-nav-link ${
-					pathname === "/" || pathname.includes("/podcast")
+					pathname === "/" || pathname === "/podcast"
 						? "text-white"
 						: "text-heading"
 				} font-semibold`}

@@ -1,5 +1,7 @@
 import { useMemo } from "react"
 import Image from "next/image"
+import PodcastPlatformPill from "../podcast-platform-pill/PodcastPlatformPill"
+import TagPill from "../tag-pill/TagPill"
 import { PodcastPlatform } from "@/utils/types"
 
 export default function AboutPodcastSection(): React.ReactElement | null {
@@ -10,21 +12,6 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 				image: "/icons/youtube-dark.png",
 				url: "https://www.youtube.com/watch?v=Q00xEQtMkjc"
 			}
-			// {
-			// 	name: "Spotify",
-			// 	image: "/icons/spotify.png",
-			// 	url: "#"
-			// },
-			// {
-			// 	name: "Amazon",
-			// 	image: "/icons/amazon.png",
-			// 	url: "#"
-			// },
-			// {
-			// 	name: "Apple Podcast",
-			// 	image: "/icons/apple-podcast.png",
-			// 	url: "#"
-			// }
 		],
 		[]
 	)
@@ -46,23 +33,12 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 				{/* Platform tabs */}
 				<div className="flex flex-row flex-wrap items-center gap-3">
 					{podcastPlatforms.map((platform, key) => (
-						<a
-							className="h-12 w-fit flex flex-row items-center gap-2 px-5 border border-b-2 border-[#bdbdbd] rounded-full cursor-pointer hover:bg-[#e5ab4e47]"
-							href={platform.url}
-							target="_blank"
+						<PodcastPlatformPill
+							url={platform.url}
+							name={platform.name}
+							image={platform.image}
 							key={key}
-						>
-							<Image
-								src={platform.image}
-								alt={platform.name}
-								className="object-contain"
-								height={20}
-								width={20}
-							/>
-							<p className="text-lg text-description font-medium">
-								{platform.name}
-							</p>
-						</a>
+						/>
 					))}
 				</div>
 			</div>
@@ -114,14 +90,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 				{/* Tags */}
 				<div className="flex flex-row flex-wrap items-center gap-3">
 					{podcastTags.map((tag, key) => (
-						<div
-							className="h-12 w-fit flex items-center justify-center px-5 bg-[#E5AB4E47] border-b-2 border-[#bdbdbd] rounded-full cursor-pointer"
-							key={key}
-						>
-							<p className="text-lg text-heading font-medium">
-								{tag}
-							</p>
-						</div>
+						<TagPill name={tag} key={key} />
 					))}
 				</div>
 			</div>

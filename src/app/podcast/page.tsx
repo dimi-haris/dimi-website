@@ -5,7 +5,7 @@ import Image from "next/image"
 import SubscribeFormSuccessPopup from "@/components/subscribe-form-success-popup/SubscribeFormSuccessPopup"
 import SubscribeFormErrorPopup from "@/components/subscribe-form-error-popup/SubscribeFormErrorPopup"
 import AboutPodcastSection from "@/components/about-podcast-section/AboutPodcastSection"
-import ComingSoonSection from "@/components/coming-soon-section/ComingSoonSection"
+import PodcastPlaylist from "@/components/podcast-playlist/PodcastPlaylist"
 import AboutHostSection from "@/components/about-host-section/AboutHostSection"
 import SubscribeToBlogsSection from "@/components/subscribe-to-blogs-section/SubscribeToBlogsSection"
 
@@ -40,8 +40,8 @@ export default function Podcast(): React.ReactElement | null {
 			/>
 			{/* About podcast section */}
 			<AboutPodcastSection />
-			{/* Coming soon section */}
-			<ComingSoonSection />
+			{/* Podcast playlist section */}
+			<PodcastPlaylist title="All Episodes" theme="dark" />
 			{/* About host section */}
 			<AboutHostSection />
 			{/* Subscribe to blogs section */}
