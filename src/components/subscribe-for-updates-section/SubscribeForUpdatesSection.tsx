@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useCallback } from "react"
-import Image from "next/image"
 import axios from "axios"
+import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Button from "../button/Button"
 
 // Interface for the props of the component
@@ -72,14 +72,8 @@ export default function SubscribeForUpdatesSection(
 			<div className="flex flex-row items-center justify-between gap-2.5 sm:gap-5">
 				{/* Subscribe input container */}
 				<div className="h-[48px] w-52 sm:w-96 rounded-full border border-heading flex flex-row items-center gap-3 px-3">
-					{/* Search icon */}
-					<Image
-						src={"/icons/search.png"}
-						alt="search"
-						className="object-contain"
-						height={15}
-						width={15}
-					/>
+					{/* Mail icon */}
+					<EnvelopeIcon className="size-5 text-black" />
 					{/* Email input */}
 					<input
 						type="email"

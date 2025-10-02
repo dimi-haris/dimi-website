@@ -11,6 +11,11 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 				name: "Youtube",
 				image: "/icons/youtube-dark.png",
 				url: "https://www.youtube.com/watch?v=Q00xEQtMkjc"
+			},
+			{
+				name: "Apple Podcast",
+				image: "/icons/apple-podcast.png",
+				url: "https://podcasts.apple.com/us/podcast/dream-it-make-it-artists-unveiled/id1843258067"
 			}
 		],
 		[]

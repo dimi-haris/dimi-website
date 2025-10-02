@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react"
 import axios from "axios"
+import { EnvelopeIcon } from "@heroicons/react/24/outline"
 import Button from "../button/Button"
 
 // Interface for the props of the component
@@ -57,11 +58,13 @@ export default function StayUpdatedSection(
 			</p>
 			{/* Email input container */}
 			<div className="h-15 w-full sm:w-[450px] rounded-full border border-[#eaeaea] flex flex-row items-center px-1">
+				{/* Mail icon */}
+				<EnvelopeIcon className="min-h-5 min-w-5 size-5 text-[#eaeaea] ml-2.5" />
 				{/* Email input */}
 				<input
 					type="email"
 					placeholder="Email Address"
-					className="w-full outline-0 text-[#dfdfdf] text-sm mx-5"
+					className="w-full outline-0 text-[#dfdfdf] text-sm mx-2.5"
 					value={email}
 					onChange={(e) => {
 						setEmail(e.target.value)
