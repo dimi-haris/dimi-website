@@ -1,8 +1,10 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
+import axios from "axios"
 import CalendarMonthDropdown from "../calendar-month-dropdown/CalendarMonthDropdown"
+import { CalendarEvent } from "@/utils/types"
 
 export default function EventCalendarSection(): React.ReactElement | null {
 	// Memoized array of month names with year
@@ -25,6 +27,41 @@ export default function EventCalendarSection(): React.ReactElement | null {
 
 	// State for the selected month initially set to the current month
 	const [selectedMonth, setSelectedMonth] = useState<string>(months[0])
+
+	// State for the calendar events
+	const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([])
+
+	const formattedSelectedMonth = useMemo(() => {
+		// Split the selected month into month name and year
+		const [monthName, year] = selectedMonth.split(" ")
+
+		// Get month number (0-11) from month name
+		const monthIndex = new Date(`${monthName} 1, 2000`).getMonth()
+
+		// Format as YYYY-MM (adding 1 to monthIndex since it's 0-based, and padding with leading zero if needed)
+		return `${year}-${(monthIndex + 1).toString().padStart(2, "0")}`
+	}, [selectedMonth])
+
+	// Fetch calendar events from the API
+	useEffect(() => {
+		;(async () => {
+			// Initiate a fetch request to the API endpoint
+			await axios
+				.get(
+					`${process.env.NEXT_PUBLIC_API_BASE_URL}/event/get_calendar_events?month=${formattedSelectedMonth}`
+				)
+				.then((response) => {
+					// Log the response data
+					console.log(response.data)
+					// Update the podcast episodes state with the fetched data
+					setCalendarEvents(response.data)
+				})
+				.catch((error) => {
+					// Log the error
+					console.error(error)
+				})
+		})()
+	}, [formattedSelectedMonth]) // Empty array as dependency to only fetch once
 
 	// Get number of days in selected month
 	const daysInMonth = useMemo(() => {
@@ -78,11 +115,46 @@ export default function EventCalendarSection(): React.ReactElement | null {
 				{Array.from({ length: daysInMonth }, (_, index) => (
 					// Calendar cell
 					<div
-						className="size-[175px] border border-[#e6e6e6] bg-white p-3"
+						className={`size-[175px] border border-[#e6e6e6] p-3 ${
+							calendarEvents.find(
+								(event) =>
+									new Date(event.date).getDate() === index + 1
+							)
+								? "bg-[#FFEBCC]"
+								: "bg-white"
+						}`}
 						key={index}
 					>
 						{/* Date number */}
 						<p className="text-2xl">{index + 1}</p>
+						{calendarEvents.find(
+							(event) =>
+								new Date(event.date).getDate() === index + 1
+						) && (
+							<p className="text-[10px] text-[#666666]">
+								{
+									calendarEvents.find(
+										(event) =>
+											new Date(event.date).getDate() ===
+											index + 1
+									)?.time
+								}
+							</p>
+						)}
+						{calendarEvents.find(
+							(event) =>
+								new Date(event.date).getDate() === index + 1
+						) && (
+							<p className="text-[10px] text-[#666666] font-semibold">
+								{
+									calendarEvents.find(
+										(event) =>
+											new Date(event.date).getDate() ===
+											index + 1
+									)?.title
+								}
+							</p>
+						)}
 					</div>
 				))}
 			</div>

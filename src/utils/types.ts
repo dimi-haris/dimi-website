@@ -76,3 +76,10 @@ export type PodcastEpisode = {
 	apple_link: string | null
 	podcastHtml: string
 }
+
+export type CalendarEvent = {
+	id: number
+	date: string
+	title: string
+	time: string
+}

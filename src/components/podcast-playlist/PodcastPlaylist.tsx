@@ -15,6 +15,7 @@ interface PodcastPlaylistProps {
 export default function PodcastPlaylist(
 	props: PodcastPlaylistProps
 ): React.ReactElement | null {
+	// State for the podcast episodes
 	const [episodes, setEpisodes] = useState<PodcastEpisode[]>([])
 
 	// Fetch episodes from the API
@@ -26,7 +27,7 @@ export default function PodcastPlaylist(
 				.then((response) => {
 					// Log the response data
 					console.log(response.data)
-					// Update the blogs state with the fetched data
+					// Update the podcast episodes state with the fetched data
 					setEpisodes(response.data)
 				})
 				.catch((error) => {

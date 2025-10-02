@@ -4,7 +4,7 @@ import { OurValue } from "@/utils/types"
 export default function ValueCard(props: OurValue): React.ReactElement | null {
 	return (
 		// Main container
-		<div className="h-fit min-h-80 w-full bg-[#1C1C1C52] rounded-lg flex flex-col items-center gap-5 px-5 py-10 relative">
+		<div className="h-fit min-h-[350px] w-full bg-[#1C1C1C52] rounded-lg flex flex-col items-center gap-5 px-5 pt-10 pb-2.5 relative">
 			{/* Line stroke */}
 			<Image
 				src={"/images/line-stroke.png"}
