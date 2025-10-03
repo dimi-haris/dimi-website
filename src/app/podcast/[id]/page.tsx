@@ -8,25 +8,14 @@ import PodcastPlatformPill from "@/components/podcast-platform-pill/PodcastPlatf
 import TagPill from "@/components/tag-pill/TagPill"
 import PodcastPlaylist from "@/components/podcast-playlist/PodcastPlaylist"
 import { PodcastEpisode } from "@/utils/types"
-export  function VideoPlayerPage() {
-  return (
-    <div className="h-screen w-screen bg-black flex items-center justify-center">
-      <video
-        className="h-full w-full object-contain"
-        src="/videos/podcast-trailer.mp4"
-        controls
-        autoPlay
-      />
-    </div>
-  )
-}
+
 export default function PodcastEpisodeByID({
 	params
 }: {
 	params: Promise<{ id: string }>
 }): React.ReactElement | null {
 	// Destructure the id from the params
-	const { id } = use(params)
+	 const { id } = use(params)
 
 	// State for the podcast data
 	const [podcast, setPodcast] = useState<PodcastEpisode | null>(null)
