@@ -31,7 +31,8 @@ export default function News(): React.ReactElement | null {
 		<div className="min-h-screen w-screen flex flex-col items-center pt-5 sm:pt-40">
 			{/* News HTML fragment */}
 			{news?.newsHtml && (
-				<div dangerouslySetInnerHTML={{ __html: news?.newsHtml }} />
+				<div  className="px-[70px] html-content  max-w-none leading-[1.5]"
+				 dangerouslySetInnerHTML={{ __html: news?.newsHtml }} />
 			)}
 		</div>
 	)

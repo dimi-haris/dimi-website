@@ -26,7 +26,7 @@ export default function BlogAndNewsCard(
 					src={
 						props.thumbnail
 							? props.thumbnail
-							: "/images/blog-image-1.png"
+							: `${props.type === "blog" ? "/images/blog-img.jpeg" : "/images/news-img.jpeg"}`
 					}
 					alt="blog-image"
 					className="object-cover size-[212px] rounded-tr-2xl rounded-bl-2xl shadow-2xl"

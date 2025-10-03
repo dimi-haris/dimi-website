@@ -75,29 +75,24 @@ export default function Footer(): React.ReactElement | null {
 					{/* Navigation links */}
 					<div className="flex flex-col gap-2 items-center sm:items-start">
 						<Link
-							href={"#"}
+							href={"/terms&Condition"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Terms
 						</Link>
 						<Link
-							href={"#"}
+							href={"/privacy-policy"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Privacy
 						</Link>
 						<Link
-							href={"#"}
+							href={"/cookie-policy"}
 							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
 						>
 							Cookies
 						</Link>
-						<Link
-							href={"#"}
-							className="text-sm text-[#eaeaea] hover:text-primary transition ease-in-out duration-500"
-						>
-							License
-						</Link>
+						
 					</div>
 				</div>
 				{/* Contact Us navigation links */}

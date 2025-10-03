@@ -183,5 +183,21 @@ h2 {
 		padding: 0 35px 50px 35px;
 	}
 }
+/* globals.css */
+.html-content h1 {
+  @apply text-3xl font-bold mb-4;
+}
+.html-content h2 {
+  @apply text-2xl font-semibold mt-6 mb-2;
+}
+.html-content p {
+  @apply text-gray-700 leading-relaxed mb-4;
+}
+.html-content a {
+  @apply text-blue-600 underline hover:text-blue-800;
+}
+.html-content ul {
+  @apply list-disc list-inside pl-5 mb-4;
+}
 
 @plugin 'tailwind-scrollbar';

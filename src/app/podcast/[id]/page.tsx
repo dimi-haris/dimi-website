@@ -8,7 +8,18 @@ import PodcastPlatformPill from "@/components/podcast-platform-pill/PodcastPlatf
 import TagPill from "@/components/tag-pill/TagPill"
 import PodcastPlaylist from "@/components/podcast-playlist/PodcastPlaylist"
 import { PodcastEpisode } from "@/utils/types"
-
+export  function VideoPlayerPage() {
+  return (
+    <div className="h-screen w-screen bg-black flex items-center justify-center">
+      <video
+        className="h-full w-full object-contain"
+        src="/videos/podcast-trailer.mp4"
+        controls
+        autoPlay
+      />
+    </div>
+  )
+}
 export default function PodcastEpisodeByID({
 	params
 }: {
@@ -24,7 +35,8 @@ export default function PodcastEpisodeByID({
 
 	// Memoized callback for playing the podcast trailer video
 	const handlePlay = useCallback((): void => {
-		setIsPlaying(true)
+		// setIsPlaying(true)
+		window.open("/videos/podcast-trailer.mp4", "_blank")
 	}, [])
 
 	// Memoized callback for pausing the podcast trailer video
