@@ -62,7 +62,7 @@ export default function AppLayout({
         {!(
           pathname === "/cookie-policy" ||
           pathname === "/privacy-policy" ||
-          pathname === "/terms&condition"
+          pathname === "/terms&Condition"
         ) && <Footer />}
       </div>
       {/* {cookies} */}
