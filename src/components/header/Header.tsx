@@ -46,24 +46,24 @@ export default function Header(): React.ReactElement | null {
         height={50}
       />
       {/* Navigation links */}
-  <div className="hidden sm:flex flex-1 justify-center">
-      <div
-        className={`hidden sm:flex flex-row items-center justify-center gap-5 text-nav-link ${
-          pathname === "/" || pathname.startsWith("/podcast")
-            ? "text-white"
-            : "text-heading"
-        } font-semibold`}
-      >
-        <Link href={"/"}>Home</Link>
-        <Link href={"/about"}>About</Link>
-        <Link href={"/blogs"}>Blogs</Link>
-        <Link href={"/podcast"}>Podcast</Link>
-        <Link href={"/services"}>Services</Link>
-        <Link href={"/news"}>News</Link>
+      <div className="hidden sm:flex flex-1 justify-center">
+        <div
+          className={`hidden sm:flex flex-row items-center justify-center gap-5 text-nav-link ${
+            pathname === "/" || pathname.startsWith("/podcast")
+              ? "text-white"
+              : "text-heading"
+          } font-semibold`}
+        >
+          <Link href={"/"}>Home</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/blogs"}>Blogs</Link>
+          <Link href={"/podcast"}>Podcast</Link>
+          <Link href={"/services"}>Services</Link>
+          <Link href={"/news"}>News</Link>
+        </div>
       </div>
-</div>
       {/* Empty div to balance the logo */}
-      <div className="hidden sm:flex w-[50px]" />
+      {/* <div className="hidden sm:flex w-[50px]" /> */}
       {/* Hamburger menu button */}
       <button
         className="sm:hidden flex items-center justify-center mr-2.5"
@@ -83,10 +83,10 @@ export default function Header(): React.ReactElement | null {
         <div
           className={`sm:hidden absolute left-0 top-16 h-fit w-full py-5 rounded-4xl bg-[#1C1C1C08] backdrop-blur-sm border border-[#E0E0E033] flex flex-col items-center gap-2.5 font-semibold text-nav-link 
             ${
-            pathname === "/" || pathname === "/podcast"
-              ? "text-white"
-              : "text-heading"
-          }`}
+              pathname === "/" || pathname === "/podcast"
+                ? "text-white"
+                : "text-heading"
+            }`}
         >
           <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>
@@ -96,8 +96,8 @@ export default function Header(): React.ReactElement | null {
           <Link href={"/news"}>News</Link>
         </div>
       )}
-    <div className="flex items-center justify-center">
- <button
+      <div className="flex items-center justify-center">
+        <button
           onClick={() => window.open("https://app.godimi.com", "_blank")}
           className={`rounded-full w-[130px] h-[48px] font-medium text-lg ${
             pathname === "/" || pathname === "/podcast"
@@ -107,18 +107,17 @@ export default function Header(): React.ReactElement | null {
         >
           Log In
         </button>
-      <div
-        className="relative group"
-      >
-        <button
-          onClick={() => window.open("https://app.godimi.com/signup", "_blank")}
-          className="bg-[#E5AB4E] rounded-full w-[130px] h-[48px] font-medium text-lg text-[#FFF] relative cursor-pointer"
-        >
-          Sign Up
-        </button>
+        <div className="relative group">
+          <button
+            onClick={() =>
+              window.open("https://app.godimi.com/signup", "_blank")
+            }
+            className="bg-[#E5AB4E] rounded-full w-[130px] h-[48px] font-medium text-lg text-[#FFF] relative cursor-pointer"
+          >
+            Sign Up
+          </button>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
-
