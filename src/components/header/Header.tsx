@@ -81,7 +81,8 @@ export default function Header(): React.ReactElement | null {
       {/* Mobile menu */}
       {isDropDownOpen && (
         <div
-          className={`sm:hidden absolute left-0 top-16 h-fit w-full py-5 rounded-4xl bg-[#1C1C1C08] backdrop-blur-sm border border-[#E0E0E033] flex flex-col items-center gap-2.5 font-semibold text-nav-link ${
+          className={`sm:hidden absolute left-0 top-16 h-fit w-full py-5 rounded-4xl bg-[#1C1C1C08] backdrop-blur-sm border border-[#E0E0E033] flex flex-col items-center gap-2.5 font-semibold text-nav-link 
+            ${
             pathname === "/" || pathname === "/podcast"
               ? "text-white"
               : "text-heading"
@@ -96,27 +97,25 @@ export default function Header(): React.ReactElement | null {
         </div>
       )}
     <div className="flex items-center justify-center">
+ <button
+          onClick={() => window.open("https://app.godimi.com", "_blank")}
+          className={`rounded-full w-[130px] h-[48px] font-medium text-lg ${
+            pathname === "/" || pathname === "/podcast"
+              ? "text-white"
+              : "text-heading"
+          } relative cursor-pointer`}
+        >
+          Log In
+        </button>
       <div
         className="relative group"
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
       >
         <button
-          onClick={() => setShowTooltip((prev) => !prev)}
-          className="bg-[#E5AB4E] rounded-full w-[130px] h-[48px] font-medium text-lg text-[#FFF] relative"
+          onClick={() => window.open("https://app.godimi.com/signup", "_blank")}
+          className="bg-[#E5AB4E] rounded-full w-[130px] h-[48px] font-medium text-lg text-[#FFF] relative cursor-pointer"
         >
           Sign Up
         </button>
-
-        {/* Tooltip */}
-        <span
-          className={`absolute right-0 top-[110%] 
-                      bg-black text-white text-sm px-3 py-1 rounded-md 
-                      whitespace-nowrap transition-opacity duration-200
-                      ${showTooltip ? "opacity-100" : "opacity-0"}`}
-        >
-          You will be able to sign up in 1 days.
-        </span>
       </div>
     </div>
     </div>
