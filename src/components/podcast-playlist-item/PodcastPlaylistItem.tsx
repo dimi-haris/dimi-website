@@ -41,7 +41,7 @@ export default function PodcastPlaylistItem(
 				/>
 				{/* Thumbnail */}
 				<Image
-					src={props.podcast_thumbnail || "/images/podcast.png"}
+					src={props.podcast_thumbnail || "/images/trailer-thumbnail.jpg"}
 					alt="podcast"
 					className="object-cover h-17 w-24 rounded-lg"
 					height={25}
@@ -135,20 +135,6 @@ export default function PodcastPlaylistItem(
 								: "/icons/spotify.png"
 						}
 						alt="spotify"
-						className="object-contain"
-						height={25}
-						width={25}
-					/>
-				</a>
-				{/* TikTok icon and link */}
-				<a
-					href={props.tiktok_link || "#"}
-					className="size-10 rounded-full border border-description flex items-center justify-center"
-					target="_blank"
-				>
-					<Image
-						src={"/icons/tik-tok-dark.png"}
-						alt="tiktok"
 						className="object-contain"
 						height={25}
 						width={25}

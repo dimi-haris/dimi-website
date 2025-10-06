@@ -10,12 +10,17 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 			{
 				name: "Youtube",
 				image: "/icons/youtube-dark.png",
-				url: "https://www.youtube.com/watch?v=Q00xEQtMkjc"
+				url: "https://www.youtube.com/@DiMi-OG"
 			},
 			{
 				name: "Apple Podcast",
 				image: "/icons/apple-podcast.png",
 				url: "https://podcasts.apple.com/us/podcast/dream-it-make-it-artists-unveiled/id1843258067"
+			},
+			{
+				name: "Spotify",
+				image: "/icons/spotify-dark.png",
+				url: "https://open.spotify.com/show/2KpY98f5yGXieabV4qrdci"
 			}
 		],
 		[]
@@ -65,7 +70,7 @@ export default function AboutPodcastSection(): React.ReactElement | null {
 					/>
 				</div>
 				{/* Description */}
-				<p className="text-lg sm:text-xl text-description">
+				<p className="text-lg sm:text-xl text-description article-paragraph">
 					Behind every successful artist is a journey one filled with
 					struggles, challenges, and hard-won victories. These are the
 					stories that inspire, empower, and connect us all.

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 
 export default function Header(): React.ReactElement | null {
+  const [showTooltip, setShowTooltip] = useState(false);
   // Get the current pathname
   const pathname = usePathname();
 
@@ -45,9 +46,10 @@ export default function Header(): React.ReactElement | null {
         height={50}
       />
       {/* Navigation links */}
+  <div className="hidden sm:flex flex-1 justify-center">
       <div
         className={`hidden sm:flex flex-row items-center justify-center gap-5 text-nav-link ${
-          pathname === "/" || pathname === "/podcast"
+          pathname === "/" || pathname.startsWith("/podcast")
             ? "text-white"
             : "text-heading"
         } font-semibold`}
@@ -59,6 +61,7 @@ export default function Header(): React.ReactElement | null {
         <Link href={"/services"}>Services</Link>
         <Link href={"/news"}>News</Link>
       </div>
+</div>
       {/* Empty div to balance the logo */}
       <div className="hidden sm:flex w-[50px]" />
       {/* Hamburger menu button */}
@@ -92,22 +95,31 @@ export default function Header(): React.ReactElement | null {
           <Link href={"/news"}>News</Link>
         </div>
       )}
-      <div className="flex items-center justify-center">
-        <div className="relative group">
-          <button className="bg-[#E5AB4E] rounded-full w-[130px] h-[48px] font-medium text-lg text-[#FFF]">
-            Sign Up
-          </button>
-          {/* Tooltip */}
-          <span
-            className="absolute left-[8%] sm:left-1/2 -translate-x-1/2 top-[110%] 
-                     bg-black text-white text-sm px-3 py-1 rounded-md 
-                     opacity-0 group-hover:opacity-100 transition-opacity 
-                     whitespace-nowrap"
-          >
-            You will be able to sign up in 1 days.
-          </span>
-        </div>
+    <div className="flex items-center justify-center">
+      <div
+        className="relative group"
+        onMouseEnter={() => setShowTooltip(true)}
+        onMouseLeave={() => setShowTooltip(false)}
+      >
+        <button
+          onClick={() => setShowTooltip((prev) => !prev)}
+          className="bg-[#E5AB4E] rounded-full w-[130px] h-[48px] font-medium text-lg text-[#FFF] relative"
+        >
+          Sign Up
+        </button>
+
+        {/* Tooltip */}
+        <span
+          className={`absolute right-0 top-[110%] 
+                      bg-black text-white text-sm px-3 py-1 rounded-md 
+                      whitespace-nowrap transition-opacity duration-200
+                      ${showTooltip ? "opacity-100" : "opacity-0"}`}
+        >
+          You will be able to sign up in 1 days.
+        </span>
       </div>
+    </div>
     </div>
   );
 }
+

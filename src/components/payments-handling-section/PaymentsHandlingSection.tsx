@@ -68,7 +68,7 @@ export default function PaymentsHandlingSection(): React.ReactElement | null {
 			</div>
 			{/* Image */}
 			<Image
-				src={"/images/payments-handling.png"}
+				src={"/images/payments-handling2.png"}
 				alt="payments-handling"
 				className="object-contain"
 				width={500}

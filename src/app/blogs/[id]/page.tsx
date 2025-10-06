@@ -39,7 +39,6 @@ export default function BlogPost({
     // Main container
     <div className="min-h-screen w-screen flex flex-col items-center pt-5 sm:pt-40">
       {/* Blog HTML fragment */}
-      <Image src={coverImage} alt="Hero Image" className="hero-img pb-8" />
       {blog?.blogHtml && (
         <div
           className="px-[70px] html-content  max-w-none leading-[1.5]"

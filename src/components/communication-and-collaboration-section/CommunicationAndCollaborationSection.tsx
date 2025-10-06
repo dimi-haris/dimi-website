@@ -69,7 +69,7 @@ export default function CommunicationAndCollaborationSection(): React.ReactEleme
 			</div>
 			{/* Image */}
 			<Image
-				src={"/images/communication-and-collaboration.png"}
+				src={"/images/communication-and-collaboration2.png"}
 				alt="communication-and-collaboration"
 				className="object-contain"
 				width={500}

@@ -335,59 +335,6 @@ export default function FAQs(): React.ReactElement | null {
 						</p>
 					</div>
 				</button>
-				{/* FAQ 6 */}
-				<button
-					className="w-full flex flex-col gap-5 cursor-pointer"
-					onClick={() =>
-						setSelectedFAQ((prev) => (prev === 6 ? null : 6))
-					}
-				>
-					{/* FAQ 6 title wrapper */}
-					<div className="w-full flex flex-row items-start sm:items-center justify-between gap-5">
-						{/* FAQ 6 title */}
-						<p className="text-heading text-[26px] font-semibold text-start">
-							Can I raise funds or earn support for my projects on
-							DiMi?
-						</p>
-						{/* Arrow icon */}
-						<ArrowUpCircleIcon
-							className={`${
-								selectedFAQ === 6
-									? "rotate-180 text-black"
-									: "rotate-0 text-[#B3B3B3]"
-							} transition-all duration-300 ease-in-out size-10 min-h-10 min-w-10`}
-						/>
-					</div>
-					{/* FAQ 6 answer wrapper */}
-					<div
-						className={`${
-							selectedFAQ === 6 ? "h-96 sm:h-48" : "h-0"
-						} overflow-hidden transition-all duration-300 ease-in-out w-full flex flex-col gap-2 sm:gap-5 items-start`}
-					>
-						{/* FAQ 6 answer */}
-						<p className="text-lg sm:text-xl text-description text-start">
-							Yes! Once our full platform is live, you’ll be able
-							to:
-						</p>
-						{/* FAQ 6 answer bullet points */}
-						<ul className="text-lg sm:text-xl text-description list-disc ml-5 sm:ml-10 text-start">
-							<li>Pitch to creative investors for funding</li>
-							<li>
-								Receive support from patrons using DiMi Coins
-								(our in-app support currency)
-							</li>
-							<li>
-								Promote your profile or project through search
-								ads and artist showcases
-							</li>
-						</ul>
-						{/* FAQ 6 answer */}
-						<p className="text-lg sm:text-xl text-description text-start">
-							Backers can directly support artists they believe
-							in, without middlemen.
-						</p>
-					</div>
-				</button>
 				{/* FAQ 7 */}
 				<button
 					className="w-full flex flex-col gap-5 cursor-pointer"

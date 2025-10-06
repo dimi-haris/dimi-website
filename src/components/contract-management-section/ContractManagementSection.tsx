@@ -7,7 +7,7 @@ export default function ContractManagementSection(): React.ReactElement | null {
 		<div className="w-full flex flex-col-reverse sm:flex-row items-center gap-20 sm:gap-40 p-10 sm:p-20">
 			{/* Image */}
 			<Image
-				src={"/images/contract-management.png"}
+				src={"/images/contract-management2.png"}
 				alt="contract-management"
 				className="object-contain"
 				width={500}
