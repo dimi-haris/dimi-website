@@ -99,12 +99,12 @@ export default function Header(): React.ReactElement | null {
           </button>
           {/* Tooltip */}
           <span
-            className="absolute left-1/2 -translate-x-1/2 top-[110%] 
+            className="absolute left-[8%] sm:left-1/2 -translate-x-1/2 top-[110%] 
                      bg-black text-white text-sm px-3 py-1 rounded-md 
                      opacity-0 group-hover:opacity-100 transition-opacity 
                      whitespace-nowrap"
           >
-            You will be able to sign up in 3 days.
+            You will be able to sign up in 1 days.
           </span>
         </div>
       </div>
