@@ -33,7 +33,7 @@ export default function CalendarMonthDropdown(
 			<ChevronDownIcon className="size-6 text-black" />
 			{/* Month dropdown */}
 			{isMonthDropdownVisible && (
-				<div className="absolute top-12 left-2 h-fit w-48 bg-white rounded-lg shadow-2xl flex flex-col gap-1 items-start px-5 py-2">
+				<div className="absolute top-12 left-2 h-fit w-48 bg-white rounded-lg shadow-2xl flex flex-col gap-1 items-start px-5 py-2 z-1">
 					{/* Month items */}
 					{props.months.map((month, index) => (
 						<p

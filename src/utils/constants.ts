@@ -97,32 +97,38 @@ export const dreamTeam: TeamMember[] = [
 	{
 		name: "Hussain Rizvi",
 		designation: "CEO & Chair Person",
-		image: "/images/hussain-rizvi.png"
+		image: "/images/hussain-rizvi.png",
+		 description:"Hussain Rizvi is Technology Risk and Security leader with over 25 years of experience, across multiple countries, advising on, developing and managing business, risk and security processes and technology. Including leadership roles at Ernst & Young, JPMorgan Chase and New York Life Insurance.  Hussain is a Founder at two startups and advises an up and coming consulting practice. Including his role as director at DocResin LLC, an art business.   ",
 	},
 	{
 		name: "Roger Chen",
 		designation: "CFO & Advisory Board Member",
-		image: "/images/roger-chen.png"
+		image: "/images/roger-chen.png",
+		description:"Roger G. Chen is a Financial Advisor and Fractional CFO Services Leader at MYeCFO. With over 25 years advising major financial institutions in risk and capital management, including senior leadership roles at EY and New York Life Insurance, Roger provides tailored financial solutions for individuals, startups, and small-to-medium-sized businesses. Roger holds the Chartered Financial Analyst (CFA) and Professional Risk Manager (PRM) designations.  Roger advises creative professionals and has a passion for music and the performing arts. He performs annually with his family as a musical quartet to raise scholarship funds for Kaufman Music Center's educational programs in New York City."
 	},
 	{
 		name: "Hedrick Berelson",
 		designation: "Advisory Board Member",
-		image: "/images/hedrick-berelson.png"
+		image: "/images/hedrick-berelson.png",
+		description:"Hedrick Berelson is a multi-hyphenate artist, content creator, consultant & manager who works with world renowned creatives and top tier content. Miss Berelson founded AMG Music and Belle Étoile Music & Films after her tenure as an executive and signed artist. She is a strong advocate for peace and the environment. Her song “ Believe,” was chosen twice by the United Nations as the peace song for the peace installation showcased on the international day of peace."
 	},
 	{
 		name: "Huma Rizvi",
 		designation: "Advisory Board Member",
-		image: "/images/huma-rizvi.png"
+		image: "/images/huma-rizvi.png",
+		description:"Huma Rizvi is a medical doctor working at the Maimonides Medical Center as Clinical Documentation Integrity Physician and the Northwell Cancer Center in a cancer datamanagement role. She had a passion for the arts since childhood and made her dream a reality during the pandemic by developing a large collection of art work in multiple mediums. She is the Founder at DocResin LLC and enjoys participating in art fairs and managing her online art sales."
 	},
 	{
 		name: "Zainab Hameed",
 		designation: "CTO & Director",
-		image: "/images/zainab-hameed.jpg"
+		image: "/images/zainab-hameed.jpg",
+		description:"With 25+ years of versatile experience and internationally accredited certifications, Zainab Hameed is a distinguished IT leader. In C-level roles with blue-chip companies, she’s a mission-driven, entrepreneurial tech leader known for delivering value.Zainab excels in Technology-led Business Transformation, IT Governance, ERP/CRM Implementations, Portfolio/Program Management, and IT Risk/Security. Recognized internationally, she leads high-performance, multicultural teams, earning awards for innovative solutions.Zainab Hameed actively drives IT excellence, shaping the landscape of risk and governance with unwavering dedication."
 	},
 	{
 		name: "Adeela Khan",
 		designation: "Advisory Board Member",
-		image: "/images/adeela-khan.jpg"
+		image: "/images/adeela-khan.jpg",
+		description:"Adeela Khan is a seasoned marketing professional with the soul of an artist. In the past 25 years, she has launched multiple brands which have gone on to become category leaders, while working in both local and multinational enterprises in Pakistan and MENA. She is recognized for her expertise as a brand strategist, communication consultant, and business development specialist.  Recently, she has been returning to her roots in visual art, while continuing to consult with brands and startups as a marketing and communications expert."
 	}
 ]
 
@@ -164,3 +170,4 @@ export const features: Feature[] = [
 		image: "/images/notifications.png"
 	}
 ]
+
