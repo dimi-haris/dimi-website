@@ -50,7 +50,9 @@ const PublishEventForm: FC = () => {
   const [submissionMessage, setSubmissionMessage] = useState<string | null>(
     null
   );
-  const [messageType, setMessageType] = useState<"success" | "error" | null>(null);
+  const [messageType, setMessageType] = useState<"success" | "error" | null>(
+    null
+  );
   const [showApprovalCard, setShowApprovalCard] = useState(false);
   // --- Handlers ---
   const handleChange = (
@@ -100,15 +102,16 @@ const PublishEventForm: FC = () => {
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/event`,
         payload,
         { headers: { "Content-Type": "multipart/form-data" } }
-      );      
+      );
       setFormData(initialFormData);
       setShowApprovalCard(true);
       setSubmissionMessage("🎉 Event submitted successfully for review!");
       setMessageType("success");
-    } catch (error: any) {
-      const message =
-        error.response?.data?.message ||
-        "⚠️ Failed to submit event. Please try again.";
+    } catch (error: unknown) {
+      const message = axios.isAxiosError(error)
+        ? error.response?.data?.message ||
+          "⚠️ Failed to submit event. Please try again."
+        : "⚠️ An unexpected error occurred.";
       setSubmissionMessage(message);
       setMessageType("error");
     } finally {

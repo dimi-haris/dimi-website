@@ -1,14 +1,17 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 export default function ApprovalCard({ onClose }: { onClose?: () => void }): React.ReactElement | null {
   return (
     <div className="fixed left-1/2 top-1/4 -translate-x-1/2 shadow-lg bg-white p-10 rounded-xl text-center flex flex-col gap-6 w-[90%] max-w-[500px] z-50">
       <div className="inline-flex items-center justify-center gap-5 p-3 bg-[#d8ffe2] rounded-xl mx-auto">
-        <img
+        <Image
           className="w-10 h-10 animate-spin"
           src="/images/loading-svg.svg"
           alt="Hourglass Icon"
+          width={10}
+          height={10}
         />
       </div>
 
