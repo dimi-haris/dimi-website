@@ -20,7 +20,8 @@ export default function AppLayout({
       className={`h-fit w-screen ${
         pathname === "/about" ||
         pathname === "/blogs" ||
-        pathname === "/services"
+        pathname === "/services" ||
+        pathname === "/event-creation"
           ? "bg-screen-radial"
           : "bg-white"
       }`}

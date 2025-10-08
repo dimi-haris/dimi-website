@@ -38,15 +38,17 @@ export default function Header(): React.ReactElement | null {
         height={5}
       />
       {/* Logo */}
-      <Image
-        src={"/icons/logo.png"}
-        alt="logo"
-        className="object-contain"
-        width={50}
-        height={50}
-      />
+      <div className="sm:basis-1/5 flex items-center">
+        <Image
+          src="/icons/logo.png"
+          alt="logo"
+          width={50}
+          height={50}
+          className="object-contain"
+        />
+      </div>
       {/* Navigation links */}
-      <div className="hidden sm:flex flex-1 justify-center">
+      <div className="hidden lg:flex flex-1 justify-center sm:basis-1/3">
         <div
           className={`hidden sm:flex flex-row items-center justify-center gap-5 text-nav-link ${
             pathname === "/" || pathname.startsWith("/podcast")
@@ -62,11 +64,9 @@ export default function Header(): React.ReactElement | null {
           <Link href={"/news"}>News</Link>
         </div>
       </div>
-      {/* Empty div to balance the logo */}
-      {/* <div className="hidden sm:flex w-[50px]" /> */}
       {/* Hamburger menu button */}
       <button
-        className="sm:hidden flex items-center justify-center mr-2.5"
+        className="lg:hidden flex items-center justify-center mr-2.5"
         onClick={handleToggleDropDown}
       >
         {/* Hamburger menu icon */}
@@ -96,7 +96,7 @@ export default function Header(): React.ReactElement | null {
           <Link href={"/news"}>News</Link>
         </div>
       )}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center sm:basis-1/3">
         <button
           onClick={() => window.open("https://app.godimi.com", "_blank")}
           className={`rounded-full w-[130px] h-[48px] font-medium text-lg ${

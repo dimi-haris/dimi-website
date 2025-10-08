@@ -16,6 +16,7 @@ export type TeamMember = {
 	name: string
 	designation: string
 	image: string
+	 description?: string
 }
 
 export type PodcastPlatform = {
