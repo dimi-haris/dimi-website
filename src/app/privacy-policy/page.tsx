@@ -54,7 +54,7 @@ useTermlyEmbed();
       <div className="p-6 max-w-4xl mx-auto">
         {/* ✅ Keep the name attr for Termly using React spread trick */}
         <div
-          className="py-10"
+          className="py-20"
           {...{ name: "termly-embed" }}
           data-id="b536f2c1-ec3e-4b68-9564-ad2c5cc5509b"
         ></div>

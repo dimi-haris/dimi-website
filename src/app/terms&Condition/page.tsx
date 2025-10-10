@@ -12,7 +12,7 @@ export default function TermsOfServicePage() {
 
       {/* ✅ Keep the name attribute using spread trick */}
       <div
-      className="py-10"
+      className="py-20"
         {...{ name: "termly-embed" }}
         data-id="fd29bd2b-08b9-4d1e-974f-ab8859a12d8c"
       ></div>
