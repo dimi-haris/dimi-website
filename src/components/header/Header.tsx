@@ -81,7 +81,7 @@ export default function Header(): React.ReactElement | null {
       {/* Mobile menu */}
       {isDropDownOpen && (
         <div
-          className={`sm:hidden absolute left-0 top-16 h-fit w-full py-5 rounded-4xl bg-[#1C1C1C08] backdrop-blur-sm border border-[#E0E0E033] flex flex-col items-center gap-2.5 font-semibold text-nav-link 
+          className={`lg:hidden absolute left-0 top-16 h-fit w-full py-5 rounded-4xl bg-[#1C1C1C08] backdrop-blur-sm border border-[#E0E0E033] flex flex-col items-center gap-2.5 font-semibold text-nav-link 
             ${
               pathname === "/" || pathname === "/podcast"
                 ? "text-white"

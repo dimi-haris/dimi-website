@@ -1,20 +1,10 @@
 "use client";
 
+import { useTermlyEmbed } from "@/hooks/useTermlyEmbed";
 import Image from "next/image"
 import React, { useEffect } from "react";
-
 export default function TermsOfServicePage() {
-  useEffect(() => {
-    // Prevent duplicate script injection
-    if (document.getElementById("termly-jssdk")) return;
-
-    const js = document.createElement("script");
-    js.id = "termly-jssdk";
-    js.src = "https://app.termly.io/embed-policy.min.js";
-    js.async = true;
-
-    document.body.appendChild(js);
-  }, []);
+  useTermlyEmbed();
 
   return (
     <>

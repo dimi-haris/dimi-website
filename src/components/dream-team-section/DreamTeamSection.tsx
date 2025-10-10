@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import TeamMemberCard from "../team-member-card/TeamMemberCard";
 import { dreamTeam } from "@/utils/constants";
@@ -37,9 +37,6 @@ export default function DreamTeamSection(): React.ReactElement | null {
       </div>
       {/* Team member cards */}
       <div className="flex flex-col sm:flex-row sm:flex-wrap items-center sm:items-start justify-center gap-5 w-full max-w-[750px]">
-        {/* {dreamTeam.map((member, key) => (
-					<TeamMemberCard {...member} key={key} />
-				))} */}
         {dreamTeam.map((member, index) => (
           <div
             key={index}
@@ -51,7 +48,17 @@ export default function DreamTeamSection(): React.ReactElement | null {
 
             {/* Hover Detail Box */}
             {hoveredMember === index && (
-              <div className="absolute left-[40%] top-[45%] z-30 transition-all duration-300">
+              <div
+                className="
+    absolute z-30 transition-all duration-300
+    w-[90vw] sm:w-auto
+    left-1/2 top-full -translate-x-1/2 mt-2
+    sm:left-[40%] sm:top-[45%] sm:mt-0"
+                // style={{
+                //   position: "absolute",
+                //   transform: "translateX(-50%)", // ensures consistent centering
+                // }}
+              >
                 <TeamMemberDetails member={member} />
               </div>
             )}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Image from "next/image";
 import axios from "axios";
 import CalendarMonthDropdown from "../calendar-month-dropdown/CalendarMonthDropdown";
@@ -34,6 +34,13 @@ export default function EventCalendarSection(): React.ReactElement | null {
   );
   // State for the calendar events
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
+  const [openTooltipIndex, setOpenTooltipIndex] = useState<number | null>(null);
+  const calendarRef = useRef<HTMLDivElement | null>(null);
+  const handleToggleTooltip = (index: number) => {
+    console.log(index, "kdkadmkadmadmka");
+
+    setOpenTooltipIndex(openTooltipIndex === index ? null : index);
+  };
   const formattedSelectedMonth = useMemo(() => {
     // Split the selected month into month name and year
     const [monthName, year] = selectedMonth.split(" ");
@@ -44,7 +51,21 @@ export default function EventCalendarSection(): React.ReactElement | null {
     // Format as YYYY-MM (adding 1 to monthIndex since it's 0-based, and padding with leading zero if needed)
     return `${year}-${(monthIndex + 1).toString().padStart(2, "0")}`;
   }, [selectedMonth]);
+useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        calendarRef.current &&
+        !calendarRef.current.contains(event.target as Node)
+      ) {
+        setOpenTooltipIndex(null);
+      }
+    };
 
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
   // Fetch calendar events from the API
   useEffect(() => {
     (async () => {
@@ -109,7 +130,7 @@ export default function EventCalendarSection(): React.ReactElement | null {
         />
       </div>
       {/* Calendar grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-7">
+      <div ref={calendarRef} className="grid grid-cols-2 sm:grid-cols-7">
         {/* Empty days */}
         {Array.from({ length: firstDay }, (_, index) => (
           <div className="hidden sm:flex" key={`empty-${index}`} />
@@ -126,6 +147,7 @@ export default function EventCalendarSection(): React.ReactElement | null {
               className={`relative group size-[175px] border border-[#e6e6e6] p-3 cursor-pointer transition-all ${
                 event ? "bg-[#FFEBCC] hover:bg-[#FFD799]" : "bg-white"
               }`}
+              onClick={() => handleToggleTooltip(index)}
             >
               {/* Date number */}
               <p className="text-2xl">{day}</p>
@@ -140,10 +162,14 @@ export default function EventCalendarSection(): React.ReactElement | null {
 
                   {/* Hover tooltip */}
                   <div
-                    className="absolute hidden group-hover:flex flex-col left-1/2 -translate-x-1/2 top-full mt-2 w-72 p-5 gap-2.5
+                    className={`absolute ${
+                      openTooltipIndex === index
+                        ? "flex"
+                        : "hidden group-hover:flex"
+                    } flex-col left-1/2 -translate-x-1/2 top-full mt-2 w-72 p-5 gap-2.5
                        rounded-[15px] border-r border-b border-[#666]/20 
                        bg-black/10 shadow-[0_4px_17px_0_rgba(0,0,0,0.13)] 
-                       backdrop-blur-[15px] transition-all duration-200 z-50 "
+                       backdrop-blur-[15px] transition-all duration-200 z-50`}
                   >
                     <div className="flex justify-between items-center">
                       <p className="uppercase text-sm font-semibold text-description">

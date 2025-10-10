@@ -13,7 +13,7 @@ interface HoverCardProps {
 
 export default function TeamMemberDetails({ member }: HoverCardProps) {
   return (
-    <div className="flex flex-row items-center gap-5 bg-[#0B0B0B85] text-white rounded-2xl p-4 backdrop-blur-md h-full w-[521px] transition-all duration-300">
+    <div className="flex flex-col sm:flex-row items-center gap-5 bg-[#0B0B0B85] text-white rounded-2xl p-4 backdrop-blur-md h-full  w-[90vw] sm:w-[380px] md:w-[460px] lg:w-[521px] transition-all duration-300">
       <div className="flex-shrink-0">
         <Image
           src={`${member.image}`}

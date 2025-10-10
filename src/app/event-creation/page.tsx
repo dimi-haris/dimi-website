@@ -129,10 +129,10 @@ const PublishEventForm: FC = () => {
   // --- JSX ---
   return (
     <div className="min-h-screen p-4 sm:p-8">
-      <div className="max-w-6xl mx-auto ">
+      <div className="max-w-full sm:max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center m-8 pt-20">
-          <h1 className="text-[40px] font-semibold text-heading mb-2">
+          <h1 className="text-4xl sm:text-[40px] font-semibold text-heading mb-2">
             Publish Your Event
           </h1>
           <p className="text-md text-description">
@@ -170,10 +170,10 @@ const PublishEventForm: FC = () => {
           }}
           className="bg-white shadow-xl rounded-2xl px-auto sm:p-10 flex flex-col items-center justify-center gap-8"
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-full sm:max-w-4xl mx-auto">
             {/* --- Basic Info --- */}
-            <section className="w-full rounded-xl">
-              <h2 className="text-xl font-semibold text-heading mb-6 pb-2">
+            <section className="w-full rounded-xl p-4 sm:p-0">
+              <h2 className="text-base sm:text-xl font-semibold text-heading mb-6 pb-2">
                 Basic Information
               </h2>
 
@@ -310,8 +310,8 @@ const PublishEventForm: FC = () => {
             </section>
 
             {/* --- Event Details --- */}
-            <section className="w-full rounded-xl">
-              <h2 className="text-xl font-semibold text-heading mb-6 pb-2">
+            <section className="w-full rounded-xl p-4 sm:p-0">
+              <h2 className="text-base sm:text-xl font-semibold text-heading mb-6 pb-2">
                 Event Details
               </h2>
 
@@ -446,7 +446,7 @@ const PublishEventForm: FC = () => {
             </section>
 
             {/* Submit Button */}
-            <div className="text-center pt-4 w-full">
+            <div className="text-center p-4 sm:pt-4 w-full">
               <button
                 type="submit"
                 className="bg-[#E5AB4E] hover:bg-[#cf963d] transition rounded-full text-white font-semibold py-3 px-10 shadow-md w-full md:w-auto"

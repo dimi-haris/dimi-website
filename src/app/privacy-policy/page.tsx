@@ -1,21 +1,54 @@
 "use client";
-
+import { useTermlyEmbed } from "@/hooks/useTermlyEmbed";
 import Image from "next/image";
 import React, { useEffect } from "react";
 
+
 export default function PrivacyPolicyPage() {
-  useEffect(() => {
-    // Prevent multiple loads
-    if (document.getElementById("termly-jssdk")) return;
+  // useEffect(() => {
+  //   const scriptId = "termly-jssdk";
+  //   const embedSelector = "[name='termly-embed']";
 
-    const js = document.createElement("script");
-    js.id = "termly-jssdk";
-    js.src = "https://app.termly.io/embed-policy.min.js";
-    js.async = true;
+  //   // 🔹 Ensure embed container is empty before reload
+  //   const embedContainer = document.querySelector(embedSelector);
+  //   if (embedContainer) embedContainer.innerHTML = "";
 
-    document.body.appendChild(js);
-  }, []);
+  //   const ensureTermlyLoaded = () => {
+  //     if (window.Termly && typeof window.Termly.loadEmbeds === "function") {
+  //       window.Termly.loadEmbeds();
+  //       return true;
+  //     }
+  //     return false;
+  //   };
 
+  //   // 🔹 If script exists, try reinitializing
+  //   if (document.getElementById(scriptId)) {
+  //     // Try immediately, then retry every 500ms until it works
+  //     let tries = 0;
+  //     const interval = setInterval(() => {
+  //       if (ensureTermlyLoaded() || tries > 10) clearInterval(interval);
+  //       tries++;
+  //     }, 500);
+  //     return;
+  //   }
+
+  //   // 🔹 Otherwise, load script fresh
+  //   const js = document.createElement("script");
+  //   js.id = scriptId;
+  //   js.src = "https://app.termly.io/embed-policy.min.js";
+  //   js.async = true;
+  //   js.onload = () => {
+  //     // Try multiple times in case Termly takes a bit to init
+  //     let tries = 0;
+  //     const interval = setInterval(() => {
+  //       if (ensureTermlyLoaded() || tries > 10) clearInterval(interval);
+  //       tries++;
+  //     }, 500);
+  //   };
+  //   document.body.appendChild(js);
+  // }, []); // runs once on mount
+
+useTermlyEmbed();
   return (
     <>
       <div className="p-6 max-w-4xl mx-auto">
